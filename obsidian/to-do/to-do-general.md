@@ -1,0 +1,4 @@
+- [ ] Make it playable
+- [ ] Make it fun
+- [ ] Make it great
+- [ ] Make it awesome

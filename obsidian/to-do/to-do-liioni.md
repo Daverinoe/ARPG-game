@@ -1,0 +1,12 @@
+- [ ] Character
+	- [ ] Movement
+	- [ ] Attacks
+	- [ ] Skills
+	- [ ] Inventory
+	- [ ] Level up
+- [ ] Art
+	- [ ] Character
+	- [ ] Environment
+	- [ ] Buttons
+	- [ ] Creatures
+	- [ ] NPC's
