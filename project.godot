@@ -72,11 +72,11 @@ Event="*res://source/helpers/autoloads/event.gd"
 Global="*res://source/helpers/autoloads/global.gd"
 __Screenshot="*res://source/helpers/autoloads/screenshot.gd"
 SettingsManager="*res://source/helpers/autoloads/settings_manager.gd"
-SceneManager="*res://source/helpers/autoloads/scene_manager.gd"
 EffectManager="*res://source/helpers/autoloads/effect_manager.gd"
 GraphicManager="*res://source/helpers/autoloads/graphic_manager.gd"
 AudioManager="*res://source/helpers/autoloads/audio_manager.gd"
 InputManager="*res://source/helpers/autoloads/input_manager.gd"
+SceneManager="*res://source/helpers/autoloads/scene_manager/scene_manager.tscn"
 
 [display]
 

@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 func _on_play_pressed() -> void:
-	SceneManager.load_scene("main")
+	SceneManager.emit_signal("change_scene", self, "res://source/scenes/world/world.tscn")
 
 
 func _on_settings_pressed() -> void:
