@@ -1,21 +1,222 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://source/scenes/loot/loot_manager.gd" type="Script" id=1]
 [ext_resource path="res://source/scenes/loot/item.tscn" type="PackedScene" id=2]
 [ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Anvil_Hammer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Double_Axe.tscn" type="PackedScene" id=5]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Arming_Sword.tscn" type="PackedScene" id=6]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bat.tscn" type="PackedScene" id=7]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bearded_Axe.tscn" type="PackedScene" id=8]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Big_Rock.tscn" type="PackedScene" id=9]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bone_Shiv.tscn" type="PackedScene" id=10]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bow.tscn" type="PackedScene" id=11]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Crossbow.tscn" type="PackedScene" id=12]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Cutlass.tscn" type="PackedScene" id=13]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Double_Hammer.tscn" type="PackedScene" id=14]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Falchion.tscn" type="PackedScene" id=15]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Dagger.tscn" type="PackedScene" id=16]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Flared_Spear.tscn" type="PackedScene" id=17]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Great_Sword.tscn" type="PackedScene" id=18]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Halberd.tscn" type="PackedScene" id=19]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Hatchet.tscn" type="PackedScene" id=20]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Kopesh.tscn" type="PackedScene" id=21]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Kriegmesser.tscn" type="PackedScene" id=22]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Kukri.tscn" type="PackedScene" id=23]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Leaf_Blade.tscn" type="PackedScene" id=24]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Macuahuitl.tscn" type="PackedScene" id=25]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Offset_Sword.tscn" type="PackedScene" id=26]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Orc_Sword.tscn" type="PackedScene" id=27]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Pitchfork.tscn" type="PackedScene" id=28]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Scimitar.tscn" type="PackedScene" id=29]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Spear.tscn" type="PackedScene" id=30]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Spiked_Club.tscn" type="PackedScene" id=31]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_War_Hammer.tscn" type="PackedScene" id=32]
+[ext_resource path="res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Wizard_Staff.tscn" type="PackedScene" id=33]
 
 [node name="loot_manager" type="Spatial"]
 script = ExtResource( 1 )
 
-[node name="anvil_hammer" parent="." instance=ExtResource( 2 )]
+[node name="melee_container" type="Spatial" parent="."]
+
+[node name="double_hammer" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 14 )
+item_size = 2
+item_name = "Double Hammer"
+inventory_space = Vector2( 2, 3 )
+
+[node name="falchion" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 15 )
+item_size = 1
+item_name = "Falchion"
+inventory_space = Vector2( 1, 3 )
+
+[node name="flared_spear" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 17 )
+item_size = 2
+item_name = "Flared Spear"
+inventory_space = Vector2( 2, 4 )
+
+[node name="great_sword" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 18 )
+item_size = 2
+item_name = "Great Sword"
+inventory_space = Vector2( 2, 3 )
+
+[node name="halberd" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 19 )
+item_size = 2
+item_name = "Halberd"
+inventory_space = Vector2( 2, 4 )
+
+[node name="hatchet" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 20 )
+item_name = "Hatchet"
+inventory_space = Vector2( 1, 2 )
+
+[node name="kopesh" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 21 )
+item_size = 1
+item_name = "Kopesh"
+inventory_space = Vector2( 2, 2 )
+
+[node name="kriegmesser" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 22 )
+item_size = 2
+inventory_space = Vector2( 1, 4 )
+
+[node name="kukri" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 23 )
+item_name = "Kukri"
+inventory_space = Vector2( 1, 2 )
+
+[node name="leaf_blade" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 24 )
+item_size = 1
+item_name = "Leaf Blade"
+inventory_space = Vector2( 1, 3 )
+
+[node name="macuahuitl" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 25 )
+item_size = 2
+item_name = "Macuahuitl"
+inventory_space = Vector2( 2, 4 )
+
+[node name="offset_sword" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 26 )
+item_size = 1
+item_name = "Offset Sword"
+inventory_space = Vector2( 1, 3 )
+
+[node name="orc_sword" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 27 )
+item_size = 1
+item_name = "Orc Sword"
+inventory_space = Vector2( 1, 3 )
+
+[node name="pitchfork" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 28 )
+item_size = 2
+item_name = "Pitchfork"
+inventory_space = Vector2( 2, 4 )
+
+[node name="scimitar" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 29 )
+item_size = 1
+item_name = "Scimitar"
+inventory_space = Vector2( 1, 3 )
+
+[node name="spear" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 30 )
+item_size = 2
+inventory_space = Vector2( 2, 4 )
+
+[node name="spiked_club" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 31 )
+item_size = 1
+item_name = "Spiked Club"
+inventory_space = Vector2( 1, 3 )
+
+[node name="warhammer" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 32 )
+item_size = 2
+item_name = "Warhammer"
+inventory_space = Vector2( 2, 3 )
+
+[node name="anvil_hammer" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 3 )
 sprite_file = ExtResource( 4 )
 item_size = 2
 item_name = "Anvil Hammer"
+inventory_space = Vector2( 2, 3 )
 
-[node name="double_axe" parent="." instance=ExtResource( 2 )]
+[node name="double_axe" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 5 )
 item_size = 2
 item_name = "Double Axe"
+inventory_space = Vector2( 2, 3 )
+
+[node name="arming_sword" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 6 )
+item_size = 1
+item_name = "Arming Sword"
+inventory_space = Vector2( 1, 3 )
+
+[node name="bat" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 7 )
+item_size = 1
+item_name = "Bat"
+inventory_space = Vector2( 1, 3 )
+
+[node name="bearded_axe" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 8 )
+item_size = 1
+item_name = "Bearded Axe"
+inventory_space = Vector2( 1, 3 )
+
+[node name="big_rock" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 9 )
+item_size = 2
+item_name = "Big Rock"
+inventory_space = Vector2( 2, 2 )
+
+[node name="bone_shiv" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 10 )
+item_name = "Bone Shiv"
+inventory_space = Vector2( 1, 2 )
+
+[node name="cutlass" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 13 )
+item_size = 1
+item_name = "Cutlass"
+inventory_space = Vector2( 1, 3 )
+
+[node name="dagger" parent="melee_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 16 )
+item_name = "Dagger"
+inventory_space = Vector2( 1, 2 )
+
+[node name="ranged_container" type="Spatial" parent="."]
+
+[node name="bow" parent="ranged_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 11 )
+type = 1
+item_size = 1
+item_name = "Bow"
+inventory_space = Vector2( 2, 3 )
+
+[node name="crossbow" parent="ranged_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 12 )
+type = 1
+item_size = 1
+item_name = "Crossbow"
+inventory_space = Vector2( 2, 3 )
+
+[node name="magic_container" type="Spatial" parent="."]
+
+[node name="wizard_staff" parent="magic_container" instance=ExtResource( 2 )]
+item_scene = ExtResource( 33 )
+type = 2
+item_size = 2
+item_name = "Staff"
+inventory_space = Vector2( 2, 3 )

@@ -18,6 +18,8 @@ func _input(event):
 	if event.is_action_pressed("skill_one"):
 		if state == get_parent().State.STATE_MOVE:
 			character.use_skill(1)
+	if event.is_action_pressed("right_click"):
+		Event.emit_signal("drop_loot", 30, character.global_translation)
 
 
 func screen_point_to_ray(pos):

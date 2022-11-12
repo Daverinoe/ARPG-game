@@ -23,6 +23,8 @@ script = ExtResource( 2 )
 [node name="character" parent="input_handler" instance=ExtResource( 1 )]
 
 [node name="StaticBody" type="StaticBody" parent="."]
+collision_layer = 3
+collision_mask = 5
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0 )
@@ -66,3 +68,5 @@ depth = 40.0
 
 [node name="crate" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 5 )
+
+[node name="items" type="Spatial" parent="."]
