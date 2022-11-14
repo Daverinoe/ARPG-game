@@ -11,12 +11,21 @@ func _process(_delta):
 	pass
 
 func _input(event):
-	var state = get_parent().current_state
+	var state = owner.current_state
+	if event is InputEventMouseMotion:
+		if state == owner.State.STATE_MOVE:
+			if character.moving:
+				character.set_target_position(screen_point_to_ray(get_viewport().get_mouse_position()))
 	if event.is_action_pressed("left_click"):
-		if state == get_parent().State.STATE_MOVE:
+		if state == owner.State.STATE_MOVE:
 			character.set_target_position(screen_point_to_ray(event.position))
+			character.moving = true
+	if event.is_action_released("left_click"):
+		if state == owner.State.STATE_MOVE:
+			character.moving = false
+			character.clear_target_position()
 	if event.is_action_pressed("skill_one"):
-		if state == get_parent().State.STATE_MOVE:
+		if state == owner.State.STATE_MOVE:
 			character.use_skill(1)
 	if event.is_action_pressed("right_click"):
 		Event.emit_signal("drop_loot", 30, character.global_translation)
