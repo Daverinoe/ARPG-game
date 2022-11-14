@@ -2,8 +2,8 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.LootManager = self
 	randomize()
+	Global.LootManager = self
 	Event.connect("drop_loot", self, "create_drop")
 	
 	# Add all children items to groups for ease of access

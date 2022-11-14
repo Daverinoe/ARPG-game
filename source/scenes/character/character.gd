@@ -19,6 +19,8 @@ var alive:bool = true
 
 func _ready():
 	nav.set_navigation(navigation)
+	Global.player_reference = self
+	Global.camera_reference = $sky_camera
 
 func set_target_position(mouse_position : Vector3):
 	if mouse_position != Vector3(0,0,0):

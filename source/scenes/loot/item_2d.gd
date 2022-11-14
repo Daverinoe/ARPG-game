@@ -1,13 +1,11 @@
 extends Node2D
 
 var sprite_file : StreamTexture
+onready var sprite_ref : Sprite = $item_sprite
 
+func _ready() -> void:
+	yield(get_parent(), "ready")
+	sprite_ref.texture = sprite_file
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta: float) -> void:
+	self.global_position = get_global_mouse_position()
