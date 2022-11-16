@@ -13,10 +13,11 @@ var target_position = Vector3()
 var velocity = Vector3()
 var new_velocity = Vector3()
 
-var movement_speed:int = 6
+var movement_speed:int = 8
 var health:int = 100
 var alive:bool = true
 var moving:bool = false
+var movement_held:bool = false
 
 func _ready():
 	nav.set_navigation(navigation)

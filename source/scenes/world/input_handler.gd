@@ -3,27 +3,29 @@ extends Spatial
 onready var character = get_node("character")
 onready var sky_camera = get_node("character/sky_camera")
 
-func _ready():
-	pass
+var time_held:float = 0
 
-func _process(_delta):
-	#print(get_parent().current_state)
-	pass
+func _process(delta):
+	if character.moving and time_held > 0.3:
+		character.movement_held = true
+		character.set_target_position(screen_point_to_ray(get_viewport().get_mouse_position()))
+	elif character.moving:
+		time_held += delta
 
 func _input(event):
 	var state = owner.current_state
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseButton:
 		if state == owner.State.STATE_MOVE:
-			if character.moving:
-				character.set_target_position(screen_point_to_ray(get_viewport().get_mouse_position()))
-	if event.is_action_pressed("left_click"):
-		if state == owner.State.STATE_MOVE:
-			character.set_target_position(screen_point_to_ray(event.position))
-			character.moving = true
+			if event.button_index == 1 and event.is_pressed():
+				character.moving = true
+				time_held = 0
+				character.set_target_position(screen_point_to_ray(event.position))
 	if event.is_action_released("left_click"):
 		if state == owner.State.STATE_MOVE:
 			character.moving = false
-			character.clear_target_position()
+			if character.movement_held:
+				character.movement_held = false
+				character.clear_target_position()
 	if event.is_action_pressed("skill_one"):
 		if state == owner.State.STATE_MOVE:
 			character.use_skill(1)
