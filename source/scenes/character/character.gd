@@ -1,10 +1,10 @@
 extends KinematicBody
 
+export var fireball: PackedScene
+
 onready var nav = $NavigationAgent
 onready var camera = $sky_camera
 onready var navigation = owner.get_node("Navigation")
-
-var fireball = preload("res://source/scenes/character/attacks/skills/fireball.tscn")
 
 var next_point = Vector3()
 var target = Vector3()
@@ -48,9 +48,8 @@ func _on_NavigationAgent_velocity_computed(safe_velocity):
 
 func use_skill(skill:int):
 	if skill == 1:
-		print("fire")
-		var instance = Fireball.new(new_velocity)
-		add_child(instance)
+		var f = fireball.instance()
+		add_child(f)
 
 func take_damage(damage:int):
 	print("damage recieved")
