@@ -12,7 +12,7 @@ func _ready():
 	alive_timer.start(life_time)
 
 func _physics_process(delta):
-	translation -= transform.basis.x * speed * delta
+	translation -= transform.basis.z * speed * delta
 
 func _on_alive_timer_timeout():
 	queue_free()

@@ -5,6 +5,7 @@ export var fireball: PackedScene
 onready var nav = $NavigationAgent
 onready var camera = $sky_camera
 onready var navigation = owner.get_node("Navigation")
+onready var body = $CSGCylinder
 
 var next_point = Vector3()
 var target = Vector3()
@@ -35,7 +36,11 @@ func _physics_process(_delta):
 		var dir = (next_point - global_transform.origin)
 		velocity = dir * movement_speed
 		velocity.y = 0
-		
+
+		if dir != Vector3.ZERO:
+			dir = dir.normalized()
+			body.look_at(translation + dir, Vector3.UP)
+
 		nav.set_velocity(velocity)
 
 	if !alive:
