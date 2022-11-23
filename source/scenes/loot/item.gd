@@ -1,4 +1,5 @@
-extends Node
+extends Item
+class_name ItemDrop
 
 export var item_scene : PackedScene = PackedScene.new()
 export var sprite_file : StreamTexture
@@ -6,15 +7,16 @@ export(Item.ITEM_TYPE) var type : int = 0
 export(Item.ITEM_SIZE) var item_size : int = 0
 export(Item.RARITY) var rarity : int = 0
 export var item_name : String = "TEST"
-export var inventory_space : Vector2 = Vector2(1, 1)
-
-
+export var inventory_size : Vector2 = Vector2(1, 1)
+export var base_cost : int = 10
 export var is_dropped : bool = false
-var drop_position : Vector3
 
+var drop_position : Vector3
+var prefix
+var suffix
 
 onready var item_reference_3d : RigidBody = $item_3d
-onready var item_reference_2d : Node2D = $item_2d
+onready var item_reference_2d : Control = $item_2d
 
 
 func _enter_tree():
@@ -59,6 +61,7 @@ func pickup() -> void:
 	if item_reference_3d.is_inside_tree():
 		pause_and_remove(item_reference_3d)
 	add_and_unpause(item_reference_2d)
+	is_dropped = false
 
 
 func _on_click_shield_input_event(camera: Node, event: InputEvent, position: Vector3, normal: Vector3, shape_idx: int) -> void:

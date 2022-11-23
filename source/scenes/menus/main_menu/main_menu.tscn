@@ -23,8 +23,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 807.0
+margin_right = 1024.0
+margin_bottom = 384.0
 size_flags_horizontal = 7
 size_flags_vertical = 3
 custom_constants/margin_right = -383
@@ -32,9 +32,8 @@ custom_constants/margin_left = 144
 
 [node name="title" type="TextureRect" parent="HBoxContainer/MarginContainer2"]
 margin_left = 144.0
-margin_top = 211.0
-margin_right = 2303.0
-margin_bottom = 595.0
+margin_right = 1407.0
+margin_bottom = 384.0
 rect_min_size = Vector2( 1024, 384 )
 size_flags_horizontal = 7
 size_flags_vertical = 6
@@ -42,9 +41,9 @@ texture = ExtResource( 1 )
 stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
-margin_top = 811.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+margin_top = 388.0
+margin_right = 1024.0
+margin_bottom = 657.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 size_flags_stretch_ratio = 0.2
@@ -53,13 +52,13 @@ custom_constants/margin_left = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
 margin_left = 100.0
-margin_right = 1820.0
+margin_right = 924.0
 margin_bottom = 269.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="play" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
-margin_right = 1720.0
+margin_right = 824.0
 margin_bottom = 87.0
 text = "Play"
 flat = true
@@ -67,7 +66,7 @@ script = ExtResource( 2 )
 
 [node name="settings" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
 margin_top = 91.0
-margin_right = 1720.0
+margin_right = 824.0
 margin_bottom = 178.0
 text = "Settings"
 flat = true
@@ -75,7 +74,7 @@ script = ExtResource( 2 )
 
 [node name="quit" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
 margin_top = 182.0
-margin_right = 1720.0
+margin_right = 824.0
 margin_bottom = 269.0
 text = "quit"
 flat = true

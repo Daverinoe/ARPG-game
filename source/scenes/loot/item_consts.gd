@@ -28,3 +28,6 @@ enum RARITY {
 	UNIQUE,
 }
 
+const common_modulate : Color = Color(0.5, 0.5, 0.5, 0.5)
+const magic_modulate : Color = Color(0.3, 0.3, 0.7, 0.5)
+const unique_modulate : Color = Color(1, 0.843, 0.0, 0.5)

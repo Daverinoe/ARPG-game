@@ -66,6 +66,8 @@ extents = Vector3( 0.683728, 0.318304, 0.183185 )
 
 [node name="item" type="Node"]
 script = ExtResource( 1 )
+sprite_file = ExtResource( 4 )
+inventory_size = Vector2( 2, 3 )
 
 [node name="item_3d" type="RigidBody" parent="."]
 collision_layer = 4
@@ -95,11 +97,30 @@ text = "TEST"
 [node name="CollisionShape" type="CollisionShape" parent="item_3d/drop_shield/click_shield"]
 shape = SubResource( 3 )
 
-[node name="item_2d" type="Node2D" parent="."]
+[node name="item_2d" type="Control" parent="."]
 script = ExtResource( 3 )
 
-[node name="item_sprite" type="Sprite" parent="item_2d"]
-texture = ExtResource( 4 )
+[node name="item_background" type="TextureRect" parent="item_2d"]
+
+[node name="MarginContainer" type="MarginContainer" parent="item_2d/item_background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 10.0
+margin_bottom = 10.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="item_texture" type="TextureRect" parent="item_2d/item_background/MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 5.0
+margin_bottom = 5.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+expand = true
+stretch_mode = 1
 
 [connection signal="input_event" from="item_3d/drop_shield/click_shield" to="." method="_on_click_shield_input_event"]
 [connection signal="mouse_entered" from="item_3d/drop_shield/click_shield" to="item_3d/drop_shield" method="_on_click_shield_mouse_entered"]

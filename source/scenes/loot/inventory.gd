@@ -1,9 +1,16 @@
 extends Control
+class_name Inventory
 
+enum TYPE {
+	CHARACTER = 0,
+	SHOP = 1,
+	BELT = 2,
+}
 
 export(int, 0, 100) var num_rows : int = 10
 export(int, 0, 100) var num_cols : int = 10
 export var slot_gap : int = 0
+export(TYPE) var inventory_type = 0
 
 var mouse_over_slot setget set_mouse_over_slot
 var slot_refs : Array = []
@@ -25,12 +32,6 @@ func _ready() -> void:
 	Event.connect("inventory_slot_hover", self, "set_mouse_over_slot")
 
 
-func _process(delta) -> void:
-	if Input.is_mouse_button_pressed(1) and mouse_over_slot != null:
-		var xy = index_to_xy(slot_refs.find(mouse_over_slot))
-		print(is_slot_occupied(xy.x, xy.y))
-
-
 func set_mouse_over_slot(inventory_slot_ref) -> void:
 	mouse_over_slot = inventory_slot_ref
 
@@ -45,8 +46,11 @@ func index_to_xy(index: int) -> Vector2:
 	return Vector2(x, (index - x) / num_cols)
 
 
-func is_slot_occupied(x: int = 0, y: int = 0) -> bool:
-	var ref = slot_refs[xy_to_index(x, y)]
+func is_slot_occupied() -> bool:
+	var index = slot_refs.find(mouse_over_slot)
+	var ref = slot_refs[index]
 	if ref.has_method("get_occupied"):
 		return ref.is_occupied
 	return false
+
+

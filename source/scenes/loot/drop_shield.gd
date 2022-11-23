@@ -4,10 +4,6 @@ onready var label : Label3D = $item_name
 onready var click_area : Area = $click_shield
 
 var base_texture : ImageTexture = ImageTexture.new()
-
-var common_modulate : Color = Color(0.5, 0.5, 0.5, 0.5)
-var magic_modulate : Color = Color(0.3, 0.3, 0.7, 0.5)
-var unique_modulate : Color = Color(1, 0.843, 0.0, 0.5)
 var base_modulate : Color
 var min_size : Vector2
 
@@ -20,11 +16,11 @@ func _ready():
 	set_collision_shape_extents()
 	match get_parent().get_parent().rarity:
 		0:
-			base_modulate = common_modulate
+			base_modulate = Item.common_modulate
 		1:
-			base_modulate = magic_modulate
+			base_modulate = Item.magic_modulate
 		2:
-			base_modulate = unique_modulate
+			base_modulate = Item.unique_modulate
 	
 	self.modulate = base_modulate
 
