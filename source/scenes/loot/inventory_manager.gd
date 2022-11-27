@@ -28,11 +28,14 @@ func _input(event: InputEvent) -> void:
 				active_item_ref.drop_position = (Global.character_reference as KinematicBody).global_translation
 				active_item_ref.drop()
 				active_item_ref = null
-		
+				
+				yield(get_tree().create_timer(0.1),"timeout")
+				Global.can_control = true
 
 
 func grab_from_ground(item_ref: ItemDrop) -> void:
 	active_item_ref = item_ref
+	Global.can_control = false
 	if inventory_open:
 		item_ref.pickup()
 	else:
@@ -46,11 +49,13 @@ func place_in_inventory(item_ref, use_mouse_slot = true) -> void:
 	var success = active_inventory.place_item(item_ref, use_mouse_slot)
 	if success:
 		active_item_ref = null
+		Global.can_control = true
 
 
 func grab_from_inventory() -> void:
 	active_item_ref = active_inventory.pickup_item()
 	if !active_item_ref == null:
+		Global.can_control = false
 		active_item_ref.get_parent().remove_child(active_item_ref)
 		Global.level_reference.get_node("items").add_child(active_item_ref)
 

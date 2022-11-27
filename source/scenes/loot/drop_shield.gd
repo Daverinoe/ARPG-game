@@ -62,11 +62,11 @@ func create_and_set_texture(item_name) -> void:
 
 
 func _on_click_shield_mouse_entered() -> void:
-	self.modulate.a += 0.5
+	self.modulate = base_modulate + Color(0.0, 0.0, 0.0, 0.5)
 
 
 func _on_click_shield_mouse_exited() -> void:
-	self.modulate.a -= 0.5
+	self.modulate = base_modulate
 
 
 func set_collision_shape_extents() -> void:

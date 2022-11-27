@@ -11,7 +11,6 @@ func _ready() -> void:
 	set_slot_size($slot_texture, Global.inventory_slot_size)
 
 func _on_inventory_slot_mouse_entered() -> void:
-	print(self)
 	Event.emit_signal("inventory_slot_hover", self)
 	
 	if is_occupied:

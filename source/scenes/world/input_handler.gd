@@ -16,7 +16,7 @@ func _unhandled_input(event):
 	var state = owner.current_state
 	if event is InputEventMouseButton:
 		if state == owner.State.STATE_MOVE:
-			if event.button_index == 1 and event.is_pressed():
+			if event.button_index == 1 and event.is_pressed() and Global.can_control:
 				character.moving = true
 				time_held = 0
 				character.set_target_position(screen_point_to_ray(event.position))

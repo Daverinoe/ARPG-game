@@ -42,7 +42,6 @@ func drop() -> void:
 		pause_and_remove(item_reference_2d)
 	if !item_reference_3d.is_inside_tree():
 		add_and_unpause(item_reference_3d)
-	Global.can_control = true
 	item_reference_3d.drop_position = self.drop_position
 	item_reference_3d.drop()
 	is_dropped = true
@@ -67,7 +66,6 @@ func pickup() -> void:
 	if !item_reference_2d.is_inside_tree():
 		add_and_unpause(item_reference_2d)
 	Global.can_control = false
-	is_dropped = false
 	item_reference_2d.set_process(true)
 	is_picked_up = true
 	print("Item picked up!")
@@ -79,7 +77,6 @@ func place_item(position_2d: Vector2) -> void:
 	if !item_reference_2d.is_inside_tree():
 		add_and_unpause(item_reference_2d)
 	is_dropped = false
-	Global.can_control = true
 	item_reference_2d.set_process(false)
 	item_reference_2d.place_down(position_2d)
 	print("Item placed!" + var2str(position_2d))

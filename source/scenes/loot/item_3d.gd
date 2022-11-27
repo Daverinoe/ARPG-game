@@ -36,6 +36,9 @@ func drop() -> void:
 	self.angular_velocity = Vector3.ZERO
 	self.apply_impulse(Vector3.ZERO, Vector3(rand_range(-5.0, 5.0), rand_range(5.0, 8.0), rand_range(-5.0, 5.0)))
 	self.apply_torque_impulse(Vector3(rand_range(-1.0, 1.0), rand_range(-1.0, 1.0), rand_range(-1.0, 1.0)) * 1.0)
+	
+	# Reset drop shield back color
+	$drop_shield._on_click_shield_mouse_exited()
 
 
 func set_static(_is_static : bool) -> void:
