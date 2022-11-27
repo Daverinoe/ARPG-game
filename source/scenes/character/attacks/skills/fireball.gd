@@ -1,16 +1,18 @@
 class_name Fireball
 extends Spatial
 
-var speed:int = 1
-var life_time:int = 10
+onready var alive_timer = $alive_timer
+
+var speed:int = 25
+var life_time:int = 5
 var velocity:Vector3
 
-func _init(v:Vector3):
-	velocity = v
-
 func _ready():
-	pass
+	set_as_toplevel(true)
+	alive_timer.start(life_time)
 
 func _physics_process(delta):
-    transform.origin += velocity * delta
+	translation -= transform.basis.z * speed * delta
 
+func _on_alive_timer_timeout():
+	queue_free()
