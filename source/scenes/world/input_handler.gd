@@ -28,6 +28,7 @@ func _input(event):
 				character.clear_target_position()
 	if event.is_action_pressed("skill_one"):
 		if state == owner.State.STATE_MOVE:
+			character.set_skill_target_position(screen_point_to_ray(get_viewport().get_mouse_position()))
 			character.use_skill(1)
 	if event.is_action_pressed("right_click"):
 		Event.emit_signal("drop_loot", 30, character.global_translation)

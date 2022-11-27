@@ -10,6 +10,7 @@ onready var body = $CSGCylinder
 var next_point = Vector3()
 var target = Vector3()
 var target_position = Vector3()
+var skill_target_position = Vector3()
 
 var velocity = Vector3()
 var new_velocity = Vector3()
@@ -26,6 +27,10 @@ func _ready():
 func set_target_position(mouse_position : Vector3):
 	if mouse_position != Vector3(0,0,0):
 		nav.set_target_location(mouse_position)
+
+func set_skill_target_position(mouse_position:Vector3):
+	if mouse_position != Vector3(0,0,0):
+		skill_target_position = mouse_position
 
 func clear_target_position():
 	nav.set_target_location(global_transform.origin)
@@ -56,7 +61,13 @@ func _on_NavigationAgent_velocity_computed(safe_velocity):
 func use_skill(skill:int):
 	if skill == 1:
 		var f = fireball.instance()
-		add_child(f)
+		var skill_direction = nav.get_target_location()
+		if not nav.is_target_reached():
+			skill_direction = (skill_direction - global_transform.origin)
+			skill_direction.y = 0
+			f.direction = skill_direction
+			add_child(f)
+			f.set_as_toplevel(true)
 
 func take_damage(damage:int):
 	print("damage recieved")
