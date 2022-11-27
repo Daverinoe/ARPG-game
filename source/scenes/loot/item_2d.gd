@@ -26,12 +26,13 @@ func _ready() -> void:
 	
 	yield(item_ref, "ready")
 	size_2d = set_size_2d()
+	self.rect_min_size = size_2d
 	set_sprite()
 	create_and_set_texture()
 
 
 func _process(delta: float) -> void:
-	self.rect_position = get_global_mouse_position()
+	self.rect_global_position = get_global_mouse_position()
 
 
 func set_size_2d() -> Vector2:
@@ -55,6 +56,10 @@ func create_and_set_texture() -> void:
 	
 	base_texture.create_from_image(image)
 	sprite_background_ref.texture = base_texture
+
+
+func place_down(new_position: Vector2) -> void:
+	self.rect_global_position = new_position
 
 
 func set_sprite() -> void:

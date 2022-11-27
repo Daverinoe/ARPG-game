@@ -3,6 +3,7 @@ extends KinematicBody
 onready var nav = $NavigationAgent
 onready var camera = $sky_camera
 onready var navigation = get_parent().get_parent().get_node("Navigation")
+onready var inventory_reference = $inventory
 
 var fireball = preload("res://source/scenes/character/attacks/skills/fireball.tscn")
 
@@ -18,6 +19,7 @@ var health:int = 100
 var alive:bool = true
 
 func _ready():
+	Global.character_reference = self
 	nav.set_navigation(navigation)
 	Global.player_reference = self
 	Global.camera_reference = $sky_camera
@@ -50,3 +52,10 @@ func take_damage(damage:int):
 	health -= damage
 	if health < 0:
 		alive = false
+
+func _unhandled_key_input(event: InputEventKey) -> void:
+	if event.is_action_pressed("inventory"):
+		if inventory_reference.visible:
+			inventory_reference.hide()
+		else:
+			inventory_reference.show()

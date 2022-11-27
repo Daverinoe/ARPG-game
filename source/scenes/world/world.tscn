@@ -70,3 +70,6 @@ depth = 40.0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 5 )
 
 [node name="items" type="Spatial" parent="."]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.990075, 0.140538, -3.68832e-09, -0.0589046, 0.414975, 0.907924, 0.127598, -0.898913, 0.419135, 0, 13.1751, 0 )

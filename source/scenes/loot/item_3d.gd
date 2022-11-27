@@ -3,22 +3,12 @@ extends RigidBody
 var collision_shape : CollisionShape
 var mesh : MeshInstance
 var drop_position : Vector3
-var is_static : bool = false
 var item_scene : PackedScene
 
 var item_name : String
 
 func _enter_tree():
 	item_name = get_parent().item_name
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	# We don't want items to move after coming to a stop, so after sleep, change collision
-	# detection to nothing and set MODE to static
-	if is_static and sleeping:
-		self.mode = RigidBody.MODE_STATIC
-		self.set_collision_layer(0)
-		self.set_collision_mask(0)
 	
 
 func drop() -> void:
@@ -37,14 +27,24 @@ func drop() -> void:
 		item_mesh_scene.free()
 	
 	self.global_translation = drop_position + Vector3(0.0, 1.0, 0.0)
-	self.sleeping = false
 	set_static(false)
-	get_tree().create_timer(1).connect("timeout", self, "set_static", [true])
+	get_tree().create_timer(3).connect("timeout", self, "set_static", [true])
 	
 	
 	# Apply "drop" rotations
-	self.apply_impulse(Vector3.ZERO, Vector3(rand_range(0.0, 5.0), 8.0, rand_range(0.0, 5.0)))
-	self.apply_torque_impulse(Vector3(4.0, 1.0, 2.0) * 10.0)
+	self.linear_velocity = Vector3.ZERO
+	self.angular_velocity = Vector3.ZERO
+	self.apply_impulse(Vector3.ZERO, Vector3(rand_range(-5.0, 5.0), rand_range(5.0, 8.0), rand_range(-5.0, 5.0)))
+	self.apply_torque_impulse(Vector3(rand_range(-1.0, 1.0), rand_range(-1.0, 1.0), rand_range(-1.0, 1.0)) * 1.0)
+
 
 func set_static(_is_static : bool) -> void:
-	is_static = _is_static
+	self.sleeping = _is_static
+	if  _is_static:
+		self.mode = RigidBody.MODE_STATIC
+		self.set_collision_layer(0)
+		self.set_collision_mask(0)
+	else:
+		self.mode = RigidBody.MODE_RIGID
+		self.set_collision_layer(4)
+		self.set_collision_mask(2)

@@ -10,16 +10,17 @@ func _process(_delta):
 	#print(get_parent().current_state)
 	pass
 
-func _input(event):
-	var state = get_parent().current_state
-	if event.is_action_pressed("left_click"):
-		if state == get_parent().State.STATE_MOVE:
-			character.set_target_position(screen_point_to_ray(event.position))
-	if event.is_action_pressed("skill_one"):
-		if state == get_parent().State.STATE_MOVE:
-			character.use_skill(1)
-	if event.is_action_pressed("right_click"):
-		Event.emit_signal("drop_loot", 30, character.global_translation)
+func _unhandled_input(event):
+	if Global.can_control:
+		var state = get_parent().current_state
+		if event.is_action_pressed("left_click"):
+			if state == get_parent().State.STATE_MOVE:
+				character.set_target_position(screen_point_to_ray(event.position))
+		if event.is_action_pressed("skill_one"):
+			if state == get_parent().State.STATE_MOVE:
+				character.use_skill(1)
+		if event.is_action_pressed("right_click"):
+			Event.emit_signal("drop_loot", 30, character.global_translation)
 
 
 func screen_point_to_ray(pos):

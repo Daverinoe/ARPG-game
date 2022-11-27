@@ -64,7 +64,8 @@ tracks/1/keys = {
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.683728, 0.318304, 0.183185 )
 
-[node name="item" type="Node"]
+[node name="item" type="Control"]
+mouse_filter = 2
 script = ExtResource( 1 )
 sprite_file = ExtResource( 4 )
 inventory_size = Vector2( 2, 3 )
@@ -98,15 +99,18 @@ text = "TEST"
 shape = SubResource( 3 )
 
 [node name="item_2d" type="Control" parent="."]
+mouse_filter = 2
 script = ExtResource( 3 )
 
 [node name="item_background" type="TextureRect" parent="item_2d"]
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="item_2d/item_background"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 10.0
 margin_bottom = 10.0
+mouse_filter = 2
 custom_constants/margin_right = 5
 custom_constants/margin_top = 5
 custom_constants/margin_left = 5
@@ -117,6 +121,7 @@ margin_left = 5.0
 margin_top = 5.0
 margin_right = 5.0
 margin_bottom = 5.0
+mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 expand = true

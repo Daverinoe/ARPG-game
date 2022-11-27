@@ -86,3 +86,5 @@ func finish_switch() -> void:
 	new_instance.set_process(true)
 	new_instance = null
 	finished_loading = false
+	yield(get_tree().create_timer(0.2), "timeout")
+	Global.can_control = true

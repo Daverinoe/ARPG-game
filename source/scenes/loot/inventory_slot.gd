@@ -2,12 +2,16 @@ extends Control
 
 export var is_occupied : bool = false setget set_occupied, get_occupied
 
+var owning_inventory
+var containing_item: ItemDrop = null
+
 
 func _ready() -> void:
 	set_slot_size(self, Global.inventory_slot_size)
 	set_slot_size($slot_texture, Global.inventory_slot_size)
 
 func _on_inventory_slot_mouse_entered() -> void:
+	print(self)
 	Event.emit_signal("inventory_slot_hover", self)
 	
 	if is_occupied:
@@ -25,6 +29,10 @@ func _on_inventory_slot_mouse_exited() -> void:
 
 func set_occupied(set_value: bool) -> void:
 	is_occupied = set_value
+	if set_value:
+		self.modulate = Color(0.5, 0.0, 0.0, 1.0)
+	else:
+		self.modulate = Color(1.0, 1.0, 1.0, 1.0)
 
 
 func get_occupied() -> bool:

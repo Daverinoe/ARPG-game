@@ -47,11 +47,13 @@ item_name = "Double Hammer"
 item_scene = ExtResource( 15 )
 item_size = 1
 item_name = "Falchion"
+inventory_size = Vector2( 1, 3 )
 
 [node name="flared_spear" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 17 )
 item_size = 2
 item_name = "Flared Spear"
+inventory_size = Vector2( 2, 4 )
 
 [node name="great_sword" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 18 )
@@ -62,10 +64,12 @@ item_name = "Great Sword"
 item_scene = ExtResource( 19 )
 item_size = 2
 item_name = "Halberd"
+inventory_size = Vector2( 2, 4 )
 
 [node name="hatchet" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 20 )
 item_name = "Hatchet"
+inventory_size = Vector2( 1, 2 )
 
 [node name="kopesh" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 21 )
@@ -79,11 +83,13 @@ item_size = 2
 [node name="kukri" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 23 )
 item_name = "Kukri"
+inventory_size = Vector2( 1, 2 )
 
 [node name="leaf_blade" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 24 )
 item_size = 1
 item_name = "Leaf Blade"
+inventory_size = Vector2( 1, 3 )
 
 [node name="macuahuitl" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 25 )
@@ -94,30 +100,36 @@ item_name = "Macuahuitl"
 item_scene = ExtResource( 26 )
 item_size = 1
 item_name = "Offset Sword"
+inventory_size = Vector2( 1, 3 )
 
 [node name="orc_sword" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 27 )
 item_size = 1
 item_name = "Orc Sword"
+inventory_size = Vector2( 1, 3 )
 
 [node name="pitchfork" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 28 )
 item_size = 2
 item_name = "Pitchfork"
+inventory_size = Vector2( 2, 4 )
 
 [node name="scimitar" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 29 )
 item_size = 1
 item_name = "Scimitar"
+inventory_size = Vector2( 1, 3 )
 
 [node name="spear" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 30 )
 item_size = 2
+inventory_size = Vector2( 2, 4 )
 
 [node name="spiked_club" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 31 )
 item_size = 1
 item_name = "Spiked Club"
+inventory_size = Vector2( 1, 3 )
 
 [node name="warhammer" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 32 )
@@ -138,11 +150,13 @@ item_name = "Double Axe"
 item_scene = ExtResource( 6 )
 item_size = 1
 item_name = "Arming Sword"
+inventory_size = Vector2( 1, 3 )
 
 [node name="bat" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 7 )
 item_size = 1
 item_name = "Bat"
+inventory_size = Vector2( 1, 3 )
 
 [node name="bearded_axe" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 8 )
@@ -153,19 +167,23 @@ item_name = "Bearded Axe"
 item_scene = ExtResource( 9 )
 item_size = 2
 item_name = "Big Rock"
+inventory_size = Vector2( 2, 2 )
 
 [node name="bone_shiv" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 10 )
 item_name = "Bone Shiv"
+inventory_size = Vector2( 1, 2 )
 
 [node name="cutlass" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 13 )
 item_size = 1
 item_name = "Cutlass"
+inventory_size = Vector2( 1, 3 )
 
 [node name="dagger" parent="melee_container" instance=ExtResource( 2 )]
 item_scene = ExtResource( 16 )
 item_name = "Dagger"
+inventory_size = Vector2( 1, 2 )
 
 [node name="ranged_container" type="Spatial" parent="."]
 

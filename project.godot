@@ -49,7 +49,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://source/scenes/loot/item_consts.gd"
 }, {
-"base": "Item",
+"base": "Control",
 "class": "ItemDrop",
 "language": "GDScript",
 "path": "res://source/scenes/loot/item.gd"
@@ -89,6 +89,7 @@ GraphicManager="*res://source/helpers/autoloads/graphic_manager.gd"
 AudioManager="*res://source/helpers/autoloads/audio_manager.gd"
 InputManager="*res://source/helpers/autoloads/input_manager.gd"
 SceneManager="*res://source/helpers/autoloads/scene_manager/scene_manager.tscn"
+InventoryManager="*res://source/scenes/loot/inventory_manager.gd"
 
 [display]
 
@@ -133,6 +134,11 @@ skill_one={
 right_click={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+inventory={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":73,"unicode":0,"echo":false,"script":null)
  ]
 }
 
