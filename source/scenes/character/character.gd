@@ -1,7 +1,5 @@
 extends KinematicBody
 
-export var fireball: PackedScene
-
 onready var nav = $NavigationAgent
 onready var camera = $sky_camera
 onready var inventory_reference = $inventory
@@ -28,6 +26,7 @@ func _ready():
 	nav.set_navigation(navigation)
 	Global.player_reference = self
 	Global.camera_reference = $sky_camera
+	InventoryManager.set_active_inventory(null)
 
 func set_target_position(mouse_position : Vector3):
 	if mouse_position != Vector3(0,0,0):

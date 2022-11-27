@@ -50,8 +50,9 @@ func place_in_inventory(item_ref, use_mouse_slot = true) -> void:
 
 func grab_from_inventory() -> void:
 	active_item_ref = active_inventory.pickup_item()
-	active_item_ref.get_parent().remove_child(active_item_ref)
-	Global.level_reference.get_node("items").add_child(active_item_ref)
+	if !active_item_ref == null:
+		active_item_ref.get_parent().remove_child(active_item_ref)
+		Global.level_reference.get_node("items").add_child(active_item_ref)
 
 
 func set_active_inventory(inventory_slot_ref) -> void:
