@@ -39,7 +39,9 @@ func _physics_process(_delta):
 
 		if dir != Vector3.ZERO:
 			dir = dir.normalized()
-			body.look_at(translation + dir, Vector3.UP)
+			var look_pos = translation + dir
+			look_pos.y = get_global_transform().origin.y + 0.5
+			body.look_at(look_pos, Vector3.UP)
 
 		nav.set_velocity(velocity)
 
