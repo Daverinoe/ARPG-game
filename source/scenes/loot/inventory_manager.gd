@@ -46,9 +46,9 @@ func place_in_inventory(item_ref, use_mouse_slot = true) -> void:
 	item_ref.get_parent().remove_child(item_ref)
 	# Add item to the item store node in the inventory
 	active_inventory.item_store.add_child(item_ref)
-	var success = active_inventory.place_item(item_ref, use_mouse_slot)
-	if success:
-		active_item_ref = null
+	var return_ref = active_inventory.place_item(item_ref, use_mouse_slot)
+	active_item_ref = return_ref
+	if return_ref == null:
 		Global.can_control = true
 
 

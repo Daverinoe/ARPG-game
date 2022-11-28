@@ -15,6 +15,8 @@ export(TYPE) var inventory_type = 0
 var mouse_over_slot setget set_mouse_over_slot
 var slot_refs : Array = []
 
+var item_reserve : ItemDrop # Used when hot-swapping items
+
 
 onready var grid_reference : GridContainer = $inventory_grid
 onready var inventory_slot = preload("res://source/scenes/loot/inventory_slot.tscn")
@@ -47,7 +49,7 @@ func set_mouse_over_slot(inventory_slot_ref) -> void:
 	mouse_over_slot = inventory_slot_ref
 
 
-func place_item(item_ref: ItemDrop, use_mouse_slot : bool = true) -> bool:
+func place_item(item_ref: ItemDrop, use_mouse_slot : bool = true) -> ItemDrop:
 	var used_slot = null
 	if use_mouse_slot:
 		used_slot = mouse_over_slot
@@ -55,17 +57,22 @@ func place_item(item_ref: ItemDrop, use_mouse_slot : bool = true) -> bool:
 		var ind = 0
 		while used_slot == null:
 			if ind >= slot_refs.size():
-				return false
+				return item_ref
 			var slot = slot_refs[ind]
 			if !is_slot_occupied(slot) and will_item_fit(item_ref, slot):
 				used_slot = slot
 			ind += 1
 	
-	if !will_item_fit(item_ref, used_slot):
-		return false
+	var old_item: ItemDrop = null
 	
-	if is_slot_occupied(mouse_over_slot) and use_mouse_slot:
-		InventoryManager.pickup_from_inventory(mouse_over_slot.containing_item)
+	if use_mouse_slot:
+		old_item = used_slot.containing_item
+	
+	if !will_item_fit(item_ref, used_slot, old_item):
+		return item_ref
+	
+	if old_item != null:
+		pickup_item()
 	
 	var slot_index = slot_refs.find(used_slot)
 	
@@ -79,7 +86,7 @@ func place_item(item_ref: ItemDrop, use_mouse_slot : bool = true) -> bool:
 	if !InventoryManager.inventory_open:
 		item_ref.visible = false
 	
-	return true
+	return old_item
 
 
 func pickup_item() -> ItemDrop:
@@ -126,7 +133,7 @@ func find_start_index(item: ItemDrop, initial_index: Vector2) -> Vector2:
 	return Vector2(x_check, y_check)
 
 
-func will_item_fit(item_ref: ItemDrop, slot_ref) -> bool:
+func will_item_fit(item_ref: ItemDrop, slot_ref, ignore_ref: ItemDrop = null) -> bool:
 	var start_index = index_to_xy(slot_refs.find(slot_ref))
 	var end_indices = item_ref.inventory_size + start_index
 	
@@ -139,7 +146,7 @@ func will_item_fit(item_ref: ItemDrop, slot_ref) -> bool:
 		for y in range(start_index.y, end_indices.y):
 			var index = xy_to_index(x, y)
 			var ref = slot_refs[index]
-			if ref == mouse_over_slot:
+			if ref == mouse_over_slot or ref.containing_item == ignore_ref:
 				continue
 			if is_slot_occupied(ref):
 				return false

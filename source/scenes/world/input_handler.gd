@@ -30,7 +30,8 @@ func _unhandled_input(event):
 		if state == owner.State.STATE_MOVE:
 			character.use_skill(1)
 	if event.is_action_pressed("right_click"):
-		Event.emit_signal("drop_loot", 30, character.global_translation)
+		for x in range(50):
+			Event.emit_signal("drop_loot", 10, character.global_translation)
 
 
 func screen_point_to_ray(pos):
