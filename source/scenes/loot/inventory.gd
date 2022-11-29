@@ -83,7 +83,9 @@ func place_item(item_ref: ItemDrop, use_mouse_slot : bool = true) -> ItemDrop:
 	print(used_slot)
 	item_ref.place_item(slot_position)
 	
-	if !InventoryManager.inventory_open:
+	if self.visible:
+		item_ref.visible = true
+	else:
 		item_ref.visible = false
 	
 	return old_item

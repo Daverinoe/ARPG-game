@@ -36,7 +36,7 @@ func _input(event: InputEvent) -> void:
 func grab_from_ground(item_ref: ItemDrop) -> void:
 	active_item_ref = item_ref
 	Global.can_control = false
-	if inventory_open:
+	if active_inventory.visible:
 		item_ref.pickup()
 	else:
 		place_in_inventory(item_ref, false)

@@ -43,6 +43,8 @@ __meta__ = {
 }
 
 [node name="inventory" parent="." instance=ExtResource( 3 )]
-visible = false
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [connection signal="velocity_computed" from="NavigationAgent" to="." method="_on_NavigationAgent_velocity_computed"]
