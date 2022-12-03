@@ -4,6 +4,7 @@ var collision_shape : CollisionShape
 var mesh : MeshInstance
 var drop_position : Vector3
 var item_scene : PackedScene
+onready var drop_shield = $drop_shield
 
 var item_name : String
 
@@ -12,6 +13,8 @@ func _enter_tree():
 	
 
 func drop() -> void:
+	item_name = get_parent().item_name
+	drop_shield.create_and_update_shield()
 	# We want to instance the item mesh, but it comes under a spatial node
 	# So we want to extract the mesh by itself
 	if mesh == null and collision_shape == null:

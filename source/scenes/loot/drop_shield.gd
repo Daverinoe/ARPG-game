@@ -8,7 +8,10 @@ var base_modulate : Color
 var min_size : Vector2
 
 func _ready():
-	var item_name : String= get_parent().item_name
+	create_and_update_shield()
+
+func create_and_update_shield() -> void:
+	var item_name : String = get_parent().item_name
 	label.text = item_name
 	
 	# Attempt to set back-shield texture to correct size

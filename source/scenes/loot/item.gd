@@ -12,21 +12,18 @@ export var base_cost : int = 10
 export var is_dropped : bool = false
 
 var drop_position : Vector3
-var prefix
-var suffix
+var prefix : Affix
+var suffix : Affix
 var is_picked_up : bool = false
+var base_name
 
 onready var item_reference_3d : RigidBody = $item_3d
 onready var item_reference_2d : Control = $item_2d
 
 
-func _enter_tree():
-	# Set if magical, and set prefix and/or suffix
-	# Update name
-	pass
-
-
 func _ready():
+	base_name = item_name
+	randomize()
 	var group_name = Item.ITEM_TYPE.keys()[type]
 	if get_parent().name != "loot_manager" and is_in_group(group_name):
 		remove_from_group(group_name)
@@ -38,6 +35,7 @@ func _ready():
 
 
 func drop() -> void:
+	update_name()
 	if item_reference_2d.is_inside_tree():
 		pause_and_remove(item_reference_2d)
 	if !item_reference_3d.is_inside_tree():
@@ -86,3 +84,13 @@ func _on_click_shield_input_event(camera: Node, event: InputEvent, position: Vec
 	var item_distance = item_reference_3d.global_translation.distance_to(Global.player_reference.global_translation)
 	if event.is_action_pressed("left_click") and item_distance < 3.0:
 		Event.emit_signal("picked_up_item", self)
+
+
+func update_name() -> void:
+	item_name = base_name
+	if prefix != null and prefix.display_text != "":
+		item_name = prefix.display_text + " " + item_name
+	if suffix != null and suffix.display_text != "":
+		item_name = item_name + " " + suffix.display_text
+	
+	item_name = item_name.capitalize()
