@@ -12,7 +12,7 @@ func _ready() -> void:
 	randomize()
 
 
-func set_volume(name: String, value: float) -> void:
-	var volume = linear2db(clamp(value, 0.0, 1.0))
-	AudioServer.set_bus_volume_db(bus_list[name], volume)
+func set_volume(bus_name: String, value: float) -> void:
+	var volume = linear_to_db(clamp(value, 0.0, 1.0))
+	AudioServer.set_bus_volume_db(bus_list[bus_name], volume)
 

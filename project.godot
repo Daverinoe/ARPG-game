@@ -6,68 +6,84 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
-_global_script_classes=[ {
+_global_script_classes=[{
 "base": "Item",
-"class": "Affix",
-"language": "GDScript",
+"class": &"Affix",
+"language": &"GDScript",
 "path": "res://source/scenes/loot/affix.gd"
 }, {
 "base": "Button",
-"class": "BoardButton",
-"language": "GDScript",
+"class": &"BoardButton",
+"language": &"GDScript",
 "path": "res://source/scenes/menus/settings/board_button.gd"
 }, {
-"base": "BoardButton",
-"class": "ChangeButton",
-"language": "GDScript",
+"base": "CustomButton",
+"class": &"ChangeButton",
+"language": &"GDScript",
 "path": "res://source/scenes/menus/settings/change_button.gd"
 }, {
-"base": "Spatial",
-"class": "Fireball",
-"language": "GDScript",
+"base": "Button",
+"class": &"CustomButton",
+"language": &"GDScript",
+"path": "res://source/scenes/menus/settings/custom_button.gd"
+}, {
+"base": "Node3D",
+"class": &"Fireball",
+"language": &"GDScript",
 "path": "res://source/scenes/character/attacks/skills/fireball.gd"
 }, {
-"base": "Area",
-"class": "HitBox",
-"language": "GDScript",
+"base": "Area3D",
+"class": &"HitBox",
+"language": &"GDScript",
 "path": "res://source/scenes/character/attacks/hitbox.gd"
 }, {
-"base": "Area",
-"class": "HurtBox",
-"language": "GDScript",
+"base": "Area3D",
+"class": &"HurtBox",
+"language": &"GDScript",
 "path": "res://source/scenes/character/attacks/hurtbox.gd"
 }, {
-"base": "Reference",
-"class": "IOHelper",
-"language": "GDScript",
+"base": "RefCounted",
+"class": &"IOHelper",
+"language": &"GDScript",
 "path": "res://source/helpers/common/io_helper.gd"
 }, {
 "base": "Control",
-"class": "Inventory",
-"language": "GDScript",
+"class": &"Inventory",
+"language": &"GDScript",
 "path": "res://source/scenes/loot/inventory.gd"
 }, {
 "base": "Node",
-"class": "Item",
-"language": "GDScript",
+"class": &"Item",
+"language": &"GDScript",
 "path": "res://source/scenes/loot/item_consts.gd"
 }, {
 "base": "Control",
-"class": "ItemDrop",
-"language": "GDScript",
+"class": &"ItemDrop",
+"language": &"GDScript",
 "path": "res://source/scenes/loot/item.gd"
 }, {
+"base": "Node3D",
+"class": &"MainScene",
+"language": &"GDScript",
+"path": "res://source/scenes/main/main_scene.gd"
+}, {
 "base": "Control",
-"class": "Setting",
-"language": "GDScript",
+"class": &"SaveMenu",
+"language": &"GDScript",
+"path": "res://source/scenes/menus/serials/save.gd"
+}, {
+"base": "Control",
+"class": &"Setting",
+"language": &"GDScript",
 "path": "res://source/scenes/menus/settings/setting.gd"
-} ]
+}]
 _global_script_class_icons={
 "Affix": "",
 "BoardButton": "",
 "ChangeButton": "",
+"CustomButton": "",
 "Fireball": "",
 "HitBox": "",
 "HurtBox": "",
@@ -75,20 +91,23 @@ _global_script_class_icons={
 "Inventory": "",
 "Item": "",
 "ItemDrop": "",
+"MainScene": "",
+"SaveMenu": "",
 "Setting": ""
 }
 
 [application]
 
-config/name="Game Off 2022"
+config/name="ARPG Game"
 run/main_scene="res://source/scenes/menus/main_menu/main_menu.tscn"
+config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
 [autoload]
 
 Event="*res://source/helpers/autoloads/event.gd"
 Global="*res://source/helpers/autoloads/global.gd"
-__Screenshot="*res://source/helpers/autoloads/screenshot.gd"
+Screenshot="*res://source/helpers/autoloads/screenshot.gd"
 SettingsManager="*res://source/helpers/autoloads/settings_manager.gd"
 EffectManager="*res://source/helpers/autoloads/effect_manager.gd"
 GraphicManager="*res://source/helpers/autoloads/graphic_manager.gd"
@@ -96,15 +115,17 @@ AudioManager="*res://source/helpers/autoloads/audio_manager.gd"
 InputManager="*res://source/helpers/autoloads/input_manager.gd"
 SceneManager="*res://source/helpers/autoloads/scene_manager/scene_manager.tscn"
 InventoryManager="*res://source/scenes/loot/inventory_manager.gd"
+GlobalRefs="*res://source/helpers/autoloads/global_refs.gd"
+VariableManager="*res://source/helpers/autoloads/variable_manager.gd"
+SerialisationManager="*res://source/helpers/autoloads/serialisation_manager.gd"
 
 [display]
 
 window/stretch/mode="viewport"
-window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PackedStringArray()
 
 [gui]
 
@@ -114,38 +135,43 @@ theme/custom="res://assets/themes/main.theme"
 
 move_left={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":65,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
 }
 move_right={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":68,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
 }
 jump={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
 }
 left_click={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
- ]
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
+]
 }
 skill_one={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":49,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
 }
 right_click={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
- ]
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"pressed":false,"double_click":false,"script":null)
+]
 }
 inventory={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":73,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
+}
+menu={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"unicode":0,"echo":false,"script":null)
+]
 }
 
 [physics]

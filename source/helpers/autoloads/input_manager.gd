@@ -5,7 +5,7 @@ class InputKey:
 	var default: int
 	var valid: bool
 
-	func _init(default_inc: int, current_inc: int = KEY_UNKNOWN, valid_inc: bool = true) -> void:
+	func _init(default_inc: int,current_inc: int = KEY_UNKNOWN,valid_inc: bool = true):
 		self.current = current_inc if current_inc != KEY_UNKNOWN else default_inc
 		self.default = default_inc
 		self.valid = valid_inc
@@ -84,7 +84,7 @@ func set_key(action_name: String, key: int) -> void:
 
 	self.update_action_binding(action_name, key)
 	
-	var value = self.input_serialize()
+#	var value = self.input_serialize()
 
 
 # Private methods
@@ -103,7 +103,7 @@ func update_action_binding(action_name: String, key: int) -> void:
 	InputMap.action_erase_events(action_name)
 
 	var event: InputEventKey = InputEventKey.new()
-	event.scancode = key
+	event.keycode = key
 
 	InputMap.action_add_event(action_name, event)
 

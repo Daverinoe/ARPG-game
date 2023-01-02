@@ -1,8 +1,8 @@
 extends Control
 
-var sprite_file : StreamTexture
-onready var sprite_ref : TextureRect = $item_background/MarginContainer/item_texture
-onready var sprite_background_ref : TextureRect = $item_background
+var sprite_file : CompressedTexture2D
+@onready var sprite_ref : TextureRect = $item_background/MarginContainer/item_texture
+@onready var sprite_background_ref : TextureRect = $item_background
 
 var base_texture : ImageTexture = ImageTexture.new()
 var base_modulate : Color
@@ -24,15 +24,15 @@ func _ready() -> void:
 	
 	sprite_background_ref.modulate = base_modulate
 	
-	yield(item_ref, "ready")
+	await item_ref.ready
 	size_2d = set_size_2d()
-	self.rect_min_size = size_2d
+	self.custom_minimum_size = size_2d
 	set_sprite()
 	create_and_set_texture()
 
 
 func _process(delta: float) -> void:
-	self.rect_global_position = get_global_mouse_position()
+	self.global_position = get_global_mouse_position()
 
 
 func set_size_2d() -> Vector2:
@@ -44,27 +44,24 @@ func set_size_2d() -> Vector2:
 func create_and_set_texture() -> void:
 	var min_size = size_2d
 	
-	var image : Image = Image.new()
-	image.create(min_size.x, min_size.y, false, Image.FORMAT_RGBA8)
+	var image : Image = Image.create(min_size.x, min_size.y, false, Image.FORMAT_RGBA8)
 	
-	image.lock()
 	for x in range(min_size.x):
 		for y in range(min_size.y):
 			image.set_pixel(x, y, Color(1.0, 1.0, 1.0, 1.0))
-	
-	image.unlock()
+
 	
 	base_texture.create_from_image(image)
 	sprite_background_ref.texture = base_texture
 
 
 func place_down(new_position: Vector2) -> void:
-	self.rect_global_position = new_position
+	self.global_position = new_position
 
 
 func set_sprite() -> void:
-	sprite_ref.expand = true
+#	sprite_ref.expand = true
 	sprite_ref.stretch_mode = TextureRect.STRETCH_SCALE
 	sprite_ref.texture = sprite_file
-	sprite_ref.rect_min_size = size_2d - Vector2(10, 10)
-	sprite_ref.rect_size = size_2d - Vector2(10, 10)
+	sprite_ref.custom_minimum_size = size_2d - Vector2(10, 10)
+	sprite_ref.size = size_2d - Vector2(10, 10)

@@ -1,15 +1,15 @@
 extends Node
 
-var active_inventory : Inventory  setget set_active_inventory, get_active_inventory
+var active_inventory : Inventory  : get = get_active_inventory, set = set_active_inventory
 var active_item_ref : ItemDrop
 var inventory_open : bool = false
 
 var just_clicked = false
 
 func _ready() -> void:
-	Event.connect("inventory_slot_hover", self, "set_active_inventory")
-	Event.connect("picked_up_item", self, "grab_from_ground")
-	Event.connect("inventory_inactive", self, "set_active_inventory")
+	Event.connect("inventory_slot_hover", Callable(self,"set_active_inventory"))
+	Event.connect("picked_up_item", Callable(self,"grab_from_ground"))
+	Event.connect("inventory_inactive", Callable(self,"set_active_inventory"))
 
 
 func _input(event: InputEvent) -> void:
@@ -25,11 +25,11 @@ func _input(event: InputEvent) -> void:
 			if inventory_open:
 				place_in_inventory(active_item_ref)
 			else:
-				active_item_ref.drop_position = (Global.character_reference as KinematicBody).global_translation
+				active_item_ref.drop_position = (Global.character_reference as CharacterBody3D).global_translation
 				active_item_ref.drop()
 				active_item_ref = null
 				
-				yield(get_tree().create_timer(0.1),"timeout")
+				await get_tree().create_timer(0.1).timeout
 				Global.can_control = true
 
 

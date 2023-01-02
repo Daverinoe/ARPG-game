@@ -7,41 +7,41 @@ enum TYPE {
 	BELT = 2,
 }
 
-export(int, 0, 100) var num_rows : int = 10
-export(int, 0, 100) var num_cols : int = 10
-export var slot_gap : int = 0
-export(TYPE) var inventory_type = 0
+@export var num_rows : int = 10 # (int, 0, 100)
+@export var num_cols : int = 10 # (int, 0, 100)
+@export var slot_gap : int = 0
+@export var inventory_type: TYPE = 0
 
-var mouse_over_slot setget set_mouse_over_slot
+var mouse_over_slot : set = set_mouse_over_slot
 var slot_refs : Array = []
 
 var item_reserve : ItemDrop # Used when hot-swapping items
 
 
-onready var grid_reference : GridContainer = $inventory_grid
-onready var inventory_slot = preload("res://source/scenes/loot/inventory_slot.tscn")
-onready var item_store = $"."
+@onready var grid_reference : GridContainer = $inventory_grid
+@onready var inventory_slot = preload("res://source/scenes/loot/inventory_slot.tscn")
+@onready var item_store = $"."
 
 
 func _ready() -> void:
 	grid_reference.columns = num_cols
 	
 	for x in range(num_cols * num_rows):
-		var new_slot = inventory_slot.instance()
+		var new_slot = inventory_slot.instantiate()
 		new_slot.owning_inventory = self
 		grid_reference.add_child(new_slot)
 		slot_refs.push_back(new_slot)
 
-	grid_reference.add_constant_override("vseparation", slot_gap)
-	grid_reference.add_constant_override("hseparation", slot_gap)
+	grid_reference.add_theme_constant_override("v_separation", slot_gap)
+	grid_reference.add_theme_constant_override("h_separation", slot_gap)
 	
-	Event.connect("inventory_slot_hover", self, "set_mouse_over_slot")
+	Event.connect("inventory_slot_hover",Callable(self,"set_mouse_over_slot"))
 	
-	yield(get_parent(), "ready")
+	await get_parent().ready
 	Event.emit_signal("inventory_inactive", null)
 	
 	show()
-	yield(get_tree().create_timer(0,1), "timeout")
+	await get_tree().create_timer(0,1).timeout
 	hide()
 
 
@@ -79,7 +79,7 @@ func place_item(item_ref: ItemDrop, use_mouse_slot : bool = true) -> ItemDrop:
 	var start_index = index_to_xy(slot_index)
 	set_slots_occupied(start_index, item_ref, true)
 	
-	var slot_position = used_slot.rect_global_position
+	var slot_position = used_slot.global_position
 	print(used_slot)
 	item_ref.place_item(slot_position)
 	

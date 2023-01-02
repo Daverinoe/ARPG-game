@@ -1,7 +1,7 @@
-extends Spatial
+extends Node3D
 
-onready var character = get_node("character")
-onready var sky_camera = get_node("character/sky_camera")
+@onready var character = get_node("character")
+@onready var sky_camera = get_node("character/sky_camera")
 
 var time_held:float = 0
 
@@ -35,10 +35,13 @@ func _unhandled_input(event):
 
 
 func screen_point_to_ray(pos):
-	var space_state = get_world().direct_space_state
+	var space_state = get_world_3d().direct_space_state
 	var ray_origin = sky_camera.project_ray_origin(pos)
 	var ray_end = ray_origin + sky_camera.project_ray_normal(pos) * 2000
-	var ray_array = space_state.intersect_ray(ray_origin, ray_end)
+	var params = PhysicsRayQueryParameters3D.new()
+	params.to = ray_end
+	params.from = ray_origin
+	var ray_array = space_state.intersect_ray(params)
 
 	if ray_array.has("position"):
 		return ray_array["position"]

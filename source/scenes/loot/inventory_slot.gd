@@ -1,6 +1,6 @@
 extends Control
 
-export var is_occupied : bool = false setget set_occupied, get_occupied
+@export var is_occupied : bool = false : get = get_occupied, set = set_occupied
 
 var owning_inventory
 var containing_item: ItemDrop = null
@@ -39,5 +39,5 @@ func get_occupied() -> bool:
 
 
 func set_slot_size(target, slot_size: int) -> void:
-	target.rect_min_size = Vector2(slot_size, slot_size)
-	target.rect_size = Vector2(slot_size, slot_size)
+	target.custom_minimum_size = Vector2(slot_size, slot_size)
+	target.size = Vector2(slot_size, slot_size)

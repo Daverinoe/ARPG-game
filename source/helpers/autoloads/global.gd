@@ -9,7 +9,7 @@ var inventory_slot_size : int = 50
 
 
 # References
-onready var level_reference = get_tree().root
+@onready var level_reference = get_tree().root
 var character_reference
 var LootManager
 var camera_reference

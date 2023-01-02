@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 
 var health:int = 10
 var alive:bool = true

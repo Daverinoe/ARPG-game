@@ -3,8 +3,8 @@ extends Node
 signal set_ss_shader
 
 
-func set_graphic(name: String, value) -> void:
-	match name:
+func set_graphic(setting_name: String, value) -> void:
+	match setting_name:
 		"screen_resolution":
 			change_resolution(value)
 		"fullscreen":
@@ -19,17 +19,20 @@ func set_graphic(name: String, value) -> void:
 
 func change_resolution(value: String) -> void:
 	var res_vals = value.split("x")
-	var resolution = Vector2(str2var(res_vals[0]), str2var(res_vals[1]))
-	OS.set_window_size(resolution)
+	var resolution = Vector2(str_to_var(res_vals[0]), str_to_var(res_vals[1]))
+	DisplayServer.window_set_size(resolution)
 
 
 func set_fullscreen(value: bool) -> void:
-	OS.window_fullscreen = value
+	if value:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 
-func set_colorblind(value: int) -> void:
+func set_colorblind(_value: int) -> void:
 	emit_signal("set_ss_shader")
 
 
-func set_colorblind_intensity(value: float) -> void:
+func set_colorblind_intensity(_value: float) -> void:
 	emit_signal("set_ss_shader")

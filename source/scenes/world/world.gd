@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 
 enum State {STATE_MOVE, STATE_INTERACT, STATE_LOCKED, STATE_DEAD}
 

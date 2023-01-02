@@ -18,7 +18,7 @@ signal setting_changed(type, name, value)
 const SETTINGS_PATH = "settings.json"
 
 # Public variables
-var resolutions : PoolStringArray = [
+var resolutions : PackedStringArray = [
 	"1024x768",
 	"1280x800",
 	"1280x720",
@@ -67,14 +67,14 @@ var settings_default: Dictionary = {
 # Lifecycle methods
 
 func _ready() -> void: 
-	OS.set_window_position(Vector2(0,0))
+	DisplayServer.window_set_position(Vector2(0,0))
 	settings_load()
-	self.connect("setting_changed", self, "change_setting")
+	self.connect("setting_changed",Callable(self,"change_setting"))
 
 
 # Public methods
-func get_setting(name, default = null):
-	var path: Array = name.split("/")
+func get_setting(setting_to_get, default = null):
+	var path: Array = setting_to_get.split("/")
 	var location: Dictionary = self.settings
 
 	for index in range(path.size() - 1):
@@ -92,27 +92,27 @@ func get_setting(name, default = null):
 		return default
 
 
-func set_setting(name: String, value, save: bool = false) -> void:	
+func set_setting(setting_to_set: String, value, _save: bool = false) -> void:	
 	for key in settings.keys():
-		if settings[key].has(name):
-			self.change_setting(key, name, value)
+		if settings[key].has(setting_to_set):
+			self.change_setting(key, setting_to_set, value)
 			break
 
 
-func change_setting(type: String, name: String, value, save: bool = false) -> void: 
+func change_setting(type: String, setting_name: String, value, _save: bool = false) -> void: 
 	match type:
 		"audio":
-			AudioManager.set_volume(name, value)
+			AudioManager.set_volume(setting_name, value)
 		"graphics":
-			GraphicManager.set_graphic(name, value)
+			GraphicManager.set_graphic(setting_name, value)
 		"effects":
-			EffectManager.set_effect(name, value)
+			EffectManager.set_effect(setting_name, value)
 		"input":
-			InputManager.set_key(name, value)
+			InputManager.set_key(setting_name, value)
 		_:
 			pass
 	
-	settings[type][name] = value
+	settings[type][setting_name] = value
 	settings_save()
 
 
@@ -120,7 +120,9 @@ func settings_load() -> void:
 	if IOHelper.file_exists(SETTINGS_PATH):
 		var setting_string: String = IOHelper.file_load(SETTINGS_PATH)
 		
-		settings = parse_json(setting_string)
+		var test_json_conv = JSON.new()
+		test_json_conv.parse(setting_string)
+		settings = test_json_conv.get_data()
 		
 #		if merge_settings(settings_default, settings): 
 #			settings_save()
@@ -134,9 +136,9 @@ func settings_load() -> void:
 
 
 func settings_save() -> void: 
-	var setting_string: String = to_json(settings)
+	var setting_string: String = JSON.stringify(settings)
 	
-	var worked = IOHelper.file_save(setting_string, SETTINGS_PATH)
+	var _worked = IOHelper.file_save(setting_string, SETTINGS_PATH)
 
 
 # Private methods 
@@ -155,14 +157,14 @@ func merge_settings(a: Dictionary, b: Dictionary) -> bool:
 	return changed
 
 
-func set_settings(settings: Dictionary, type: String = "") -> void:
-	for key in settings.keys():
-		var setting = settings[key]
+func set_settings(settings_to_set: Dictionary, type: String = "") -> void:
+	for key in settings_to_set.keys():
+		var setting = settings_to_set[key]
 		# Recursion! Yay! Nothing could possibly go wrong here!
 		if typeof(setting) == TYPE_DICTIONARY:
 			set_settings(setting, key)
 		if type:
-			change_setting(type, key, settings[key])
+			change_setting(type, key, settings_to_set[key])
 
 func get_settings() -> Dictionary:
 	return settings

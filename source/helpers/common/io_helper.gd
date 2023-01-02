@@ -11,9 +11,7 @@ const OUTPUT_RELATIVE: String = "user://"
 static func directory_create(path: String, relative: bool = true) -> bool:
 	var normalized_path: String = normalize_path(path, relative)
 
-	var directory: Directory = Directory.new()
-
-	var result: int = directory.make_dir_recursive(normalized_path)
+	var result: int = DirAccess.make_dir_recursive_absolute(normalized_path)
 	if result != OK:
 		# TODO: Add logger
 		return false
@@ -24,47 +22,34 @@ static func directory_create(path: String, relative: bool = true) -> bool:
 static func directory_exists(path: String, relative: bool = true) -> bool:
 	var normalized_path: String = normalize_path(path, relative)
 
-	var directory: Directory = Directory.new()
+	var directory = DirAccess.open(OUTPUT_RELATIVE)
 
-	return directory.dir_exists(path)
+	return directory.dir_exists(normalized_path)
 
 
-static func directory_list_files(path: String, relative: bool = true) -> Array:
+static func directory_list_files(path: String, relative: bool = true) -> PackedStringArray:
 	var normalized_path: String = normalize_path(path, relative)
 
-	var directory: Directory = Directory.new()
+	var directory = DirAccess.open(OUTPUT_RELATIVE)
 
 	if !directory.dir_exists(normalized_path):
-		return []
+		return PackedStringArray([])
 
-	var result: int = directory.open(normalized_path)
-	if result != OK:
+	directory = DirAccess.open(normalized_path)
+	if DirAccess.get_open_error() != OK:
 		# TODO: Add logger
 
-		return []
+		return PackedStringArray([])
 
-	directory.list_dir_begin(true, false)
-
-	var files: Array = []
-
-	var file: String = directory.get_next()
-	while file != "":
-		if directory.file_exists(file):
-			files.append(file)
-
-		file = directory.get_next()
-
-	directory.list_dir_end()
-
-	return files
+	return directory.get_files()
 
 
 static func file_delete(path: String, relative: bool = true) -> bool:
 	var normalized_path: String = normalize_path(path, relative)
 
-	var directory: Directory = Directory.new()
+	var directory = DirAccess.open(OUTPUT_RELATIVE)
 
-	var result: int = directory.remove(normalized_path)
+	var result: int = directory.remove_at(normalized_path)
 	if result != OK:
 		# TODO: Add logger
 
@@ -76,24 +61,19 @@ static func file_delete(path: String, relative: bool = true) -> bool:
 static func file_exists(path: String, relative: bool = true) -> bool:
 	var normalized_path: String = normalize_path(path, relative)
 
-	var file: File = File.new()
-
-	return file.file_exists(normalized_path)
+	return FileAccess.file_exists(normalized_path)
 
 
 static func file_load(path: String, relative: bool = true) -> String:
 	var normalized_path: String = normalize_path(path, relative)
 
-	var file: File = File.new()
-
-	var result: int = file.open(normalized_path, File.READ)
-	if result != OK:
+	var result: FileAccess = FileAccess.open(normalized_path, FileAccess.READ)
+	if FileAccess.get_open_error() != OK:
 		# TODO: Add logger
 
 		return ""
 
-	var content: String = file.get_as_text()
-	file.close()
+	var content: String = result.get_as_text()
 
 	return content
 
@@ -101,16 +81,13 @@ static func file_load(path: String, relative: bool = true) -> String:
 static func file_save(content: String, path: String, relative: bool = true) -> bool:
 	var normalized_path: String = normalize_path(path, relative)
 
-	var file: File = File.new()
-
-	var result: int = file.open(normalized_path, File.WRITE)
-	if result != OK:
-		push_warning("File failed to save! Path: %s" % normalized_path)
+	var result: FileAccess = FileAccess.open(normalized_path, FileAccess.WRITE)
+	if FileAccess.get_open_error() != OK:
+		push_warning("File failed to save! Path3D: %s" % normalized_path)
 
 		return false
 
-	file.store_string(content)
-	file.close()
+	result.store_string(content)
 
 	return true
 

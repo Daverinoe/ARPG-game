@@ -1,15 +1,15 @@
 extends Control
 class_name ItemDrop
 
-export var item_scene : PackedScene = PackedScene.new()
-export var sprite_file : StreamTexture
-export(Item.ITEM_TYPE) var type : int = 0
-export(Item.ITEM_SIZE) var item_size : int = 0
-export(Item.RARITY) var rarity : int = 0
-export var item_name : String = "TEST"
-export var inventory_size : Vector2 = Vector2(1, 1)
-export var base_cost : int = 10
-export var is_dropped : bool = false
+@export var item_scene : PackedScene = PackedScene.new()
+@export var sprite_file : CompressedTexture2D
+@export var type : int = 0 # (Item.ITEM_TYPE)
+@export var item_size : int = 0 # (Item.ITEM_SIZE)
+@export var rarity : int = 0 # (Item.RARITY)
+@export var item_name : String = "TEST"
+@export var inventory_size : Vector2 = Vector2(1, 1)
+@export var base_cost : int = 10
+@export var is_dropped : bool = false
 
 var drop_position : Vector3
 var prefix : Affix
@@ -17,14 +17,17 @@ var suffix : Affix
 var is_picked_up : bool = false
 var base_name
 
-onready var item_reference_3d : RigidBody = $item_3d
-onready var item_reference_2d : Control = $item_2d
+@onready var item_reference_3d : RigidBody3D = $item_3d
+@onready var item_reference_2d : Control = $item_2d
 
 
 func _ready():
 	base_name = item_name
 	randomize()
-	var group_name = Item.ITEM_TYPE.keys()[type]
+	# TODO fix when enum weirdness is fixed
+	var item_instance = Item.new()
+	var item_keys = item_instance.ITEM_TYPE
+	var group_name = item_instance.ITEM_TYPE.keys()[type]
 	if get_parent().name != "loot_manager" and is_in_group(group_name):
 		remove_from_group(group_name)
 	item_reference_3d.item_scene = self.item_scene
@@ -48,14 +51,14 @@ func drop() -> void:
 
 func pause_and_remove(node_reference) -> void:
 	node_reference.visible = false
-	node_reference.pause_mode = Node.PAUSE_MODE_STOP
+	node_reference.process_mode = Node.PROCESS_MODE_PAUSABLE
 	self.remove_child(node_reference)
 
 
 func add_and_unpause(node_reference) -> void:
 	self.add_child(node_reference)
 	node_reference.visible = true
-	node_reference.pause_mode = Node.PAUSE_MODE_INHERIT
+	node_reference.process_mode = Node.PROCESS_MODE_INHERIT
 
 
 func pickup() -> void:
@@ -77,7 +80,7 @@ func place_item(position_2d: Vector2) -> void:
 	is_dropped = false
 	item_reference_2d.set_process(false)
 	item_reference_2d.place_down(position_2d)
-	print("Item placed!" + var2str(position_2d))
+	print("Item placed!" + var_to_str(position_2d))
 
 
 func _on_click_shield_input_event(camera: Node, event: InputEvent, position: Vector3, normal: Vector3, shape_idx: int) -> void:

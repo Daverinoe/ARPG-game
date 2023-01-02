@@ -50,7 +50,9 @@ func settings_load() -> void:
 	if IOHelper.file_exists(SETTINGS_PATH):
 		var setting_string: String = IOHelper.file_load(SETTINGS_PATH)
 		
-		settings = parse_json(setting_string)
+		var test_json_conv = JSON.new()
+		test_json_conv.parse(setting_string)
+		settings = test_json_conv.get_data()
 		
 		if merge_settings(settings, settings_default): 
 			settings_save()
@@ -65,7 +67,7 @@ func settings_load() -> void:
 
 
 func settings_save() -> void: 
-	var setting_string: String = to_json(settings)
+	var setting_string: String = JSON.new().stringify(settings)
 		
 	IOHelper.file_save(SETTINGS_PATH, setting_string)
 
