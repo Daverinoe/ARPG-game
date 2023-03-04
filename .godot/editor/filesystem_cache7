@@ -1,211 +1,210 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1672649451
-default_bus_layout.tres::AudioBusLayout::-1::1672571016::0::1::::<><>::
-default_env.tres::Environment::-1::1672571016::0::1::::<><>::
-export_presets.cfg::TextFile::-1::1672570895::0::1::::<><>::
-icon.png::CompressedTexture2D::2595022607208925941::1672570895::1672571035::1::::<><>::
-README.md::TextFile::-1::1672570895::0::1::::<><>::
-::res://assets/::1672570996
-::res://assets/audio/::1672570996
-::res://assets/audio/music/::1672571036
-The Run (Loopable).wav::AudioStreamWAV::145981974226965846::1669907604::1672571036::1::::<><>::
-::res://assets/audio/sfx/::1672570388
-::res://assets/fonts/::1672571035
-OpenDyslexic3-Regular.ttf::FontFile::7642995063138442821::1671275641::1672571035::1::::<><>::
-settings.tres::FontFile::-1::1672571017::0::1::::<><>::res://assets/fonts/OpenDyslexic3-Regular.ttf
-::res://assets/shader/::1672570895
-common.gdshader::Shader::-1::1671275641::0::1::::<><>::
-::res://assets/sprites/::1672570895
-::res://assets/sprites/inventory/::1672571035
-base_inventory.png::CompressedTexture2D::9204933617756688829::1672570895::1672571035::1::::<><>::
-square_back.png::CompressedTexture2D::6471430668915685147::1672570895::1672571035::1::::<><>::
-::res://assets/textures/::1672571035
-Marble023_1K_Color.png::CompressedTexture2D::8727914383622545807::1672570895::1672571035::1::::<><>::
-::res://assets/themes/::1672585947
-item_shield.tres::Theme::-1::1672571017::0::1::::<><>::res://assets/fonts/settings.tres
-main.theme::Theme::-1::1671275641::0::1::::<><>::res://assets/fonts/settings.tres
-settings.tres::Theme::1057864279224208464::1672585947::0::1::::<><>::res://assets/fonts/settings.tres
-::res://obsidian/::1672570895
-cliches.md::TextFile::-1::1672570895::0::1::::<><>::
-game idea.md::TextFile::-1::1672570895::0::1::::<><>::
-::res://obsidian/Excalidraw/::1672570895
-input.excalidraw.md::TextFile::-1::1672570895::0::1::::<><>::
-::res://obsidian/to-do/::1672570895
-Loot system.md::TextFile::-1::1672570895::0::1::::<><>::
-to-do-dave.md::TextFile::-1::1672570895::0::1::::<><>::
-to-do-general.md::TextFile::-1::1672570895::0::1::::<><>::
-to-do-liioni.md::TextFile::-1::1672570895::0::1::::<><>::
-::res://source/::1672570895
-::res://source/helpers/::1672570895
-::res://source/helpers/autoloads/::1672572163
-audio_manager.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-effect_manager.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-event.gd::GDScript::-1::1672572163::0::1::::<>Node<>::
-global.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-global_refs.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-graphic_manager.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-input_manager.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-screenshot.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-serialisation_manager.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-settings.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-settings_manager.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-variable_manager.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-::res://source/helpers/autoloads/scene_manager/::1672571035
-70.png::CompressedTexture2D::8991248821801903181::1672050792::1672571035::1::::<><>::
-bar.png::CompressedTexture2D::5403046923466547570::1672570895::1672571035::1::::<><>::
-over.png::CompressedTexture2D::4994677388893878852::1672570895::1672571035::1::::<><>::
-scene_manager.gd::GDScript::-1::1672571017::0::1::::<>Node<>::
-scene_manager.tscn::PackedScene::2348726467018960482::1672571017::0::1::::<><>::res://source/helpers/autoloads/scene_manager/scene_manager.gd<>uid://d1dos37ndi1vl<>uid://cysbys3kvxbh0
-under.png::CompressedTexture2D::7882150170726615395::1672570895::1672571035::1::::<><>::
-::res://source/helpers/common/::1672570895
-io_helper.gd::GDScript::-1::1672571017::0::1::::IOHelper<>RefCounted<>::
-::res://source/scenes/::1672570896
-::res://source/scenes/character/::1672570895
-character.gd::GDScript::-1::1672571017::0::1::::<>CharacterBody3D<>::
-character.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/character/character.gd<>res://source/scenes/character/attacks/hurtbox.gd<>res://source/scenes/loot/inventory.tscn<>res://source/scenes/character/attacks/skills/fireball.tscn
-::res://source/scenes/character/attacks/::1672570895
-hitbox.gd::GDScript::-1::1672571017::0::1::::HitBox<>Area3D<>::
-hurtbox.gd::GDScript::-1::1672571017::0::1::::HurtBox<>Area3D<>::
-sword.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/character/attacks/hitbox.gd
-::res://source/scenes/character/attacks/skills/::1672570895
-fireball.gd::GDScript::-1::1672571017::0::1::::Fireball<>Node3D<>::
-fireball.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/character/attacks/hitbox.gd<>res://source/scenes/character/attacks/skills/fireball.gd
-::res://source/scenes/credits/::1672570895
-credits.gd::GDScript::-1::1672571017::0::1::::<>Control<>::
-credits.json::JSON::-1::1672050792::0::1::::<><>::
-credits.tscn::PackedScene::5943525217916964010::1672571017::0::1::::<><>::res://source/scenes/credits/credits.gd
-::res://source/scenes/loot/::1672597811
-affix.gd::GDScript::-1::1672571147::0::1::::Affix<>Item<>::
-drop_shield.gd::GDScript::-1::1672574667::0::1::::<>Sprite3D<>::
-inventory.gd::GDScript::-1::1672571017::0::1::::Inventory<>Control<>::
-inventory.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/inventory.gd
-inventory_manager.gd::GDScript::-1::1672572163::0::1::::<>Node<>::
-inventory_slot.gd::GDScript::-1::1672571017::0::1::::<>Control<>::
-inventory_slot.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://assets/sprites/inventory/square_back.png<>res://source/scenes/loot/inventory_slot.gd
-item.gd::GDScript::-1::1672586085::0::1::::ItemDrop<>Control<>::
-item.tscn::PackedScene::7883613982041210768::1672597772::0::1::::<><>::res://source/scenes/loot/item.gd<>res://source/scenes/loot/item_3d.gd<>res://source/scenes/loot/item_2d.gd<>uid://bc8bv4sptl1mn<>res://source/scenes/loot/drop_shield.gd
-item_2d.gd::GDScript::-1::1672597738::0::1::::<>Control<>::
-item_3d.gd::GDScript::-1::1672574284::0::1::::<>RigidBody3D<>::
-item_consts.gd::GDScript::-1::1672597608::0::1::::Item<>Node<>::
-loot_manager.gd::GDScript::-1::1672571017::0::1::::<>Node3D<>::
-loot_manager.tscn::PackedScene::4238304273251342430::1672597811::0::1::::<><>::res://source/scenes/loot/loot_manager.gd<>uid://dkk4784rcvqiy<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Anvil_Hammer.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Double_Axe.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Arming_Sword.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bat.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bearded_Axe.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Big_Rock.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bone_Shiv.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bow.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Crossbow.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Cutlass.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Double_Hammer.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Falchion.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Dagger.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Flared_Spear.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Great_Sword.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Halberd.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Hatchet.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Kopesh.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Kriegmesser.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Kukri.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Leaf_Blade.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Macuahuitl.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Offset_Sword.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Orc_Sword.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Pitchfork.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Scimitar.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Spear.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Spiked_Club.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_War_Hammer.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Wizard_Staff.tscn
-::res://source/scenes/loot/meshes/::1672570896
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Anvil_Hammer.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Anvil_Hammer.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Arming_Sword.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Arming_Sword.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Bat.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Bat.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Bearded_Axe.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Bearded_Axe.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Big_Rock.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Big_Rock.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Blunt_Arrow.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Blunt_Arrow.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Bone_Shiv.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Bone_Shiv.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Bow.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Bow.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Broadhead_Arrow.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Broadhead_Arrow.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Bullet_Arrow.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Bullet_Arrow.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Crossbow.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Crossbow.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Cutlass.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Cutlass.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Dagger.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Dagger.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Double_Axe.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Double_Axe.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Double_Hammer.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Double_Hammer.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Falchion.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Falchion.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Flared_Spear.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Flared_Spear.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Great_Sword.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Great_Sword.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Halberd.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Halberd.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Hatchet.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Hatchet.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Kopesh.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Kopesh.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Kriegmesser.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Kriegmesser.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Kukri.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Kukri.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Leaf_Blade.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Leaf_Blade.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Macuahuitl.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Macuahuitl.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Offset_Sword.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Offset_Sword.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Orc_Sword.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Orc_Sword.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Pebble.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Pebble.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Piercing_Arrow.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Piercing_Arrow.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Pitchfork.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Pitchfork.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Rock.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Rock.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Scimitar.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Scimitar.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Spear.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Spear.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Spiked_Club.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Spiked_Club.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_War_Hammer.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_War_Hammer.glb
-Low Poly Weapon Pack - by Kickin It Studiosfbx_Wizard_Staff.tscn::PackedScene::-1::1672571017::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Wizard_Staff.glb
-Low Poly Weapon Pack - by Kickin It Studios_Cube060.mesh::ArrayMesh::-1::1672570895::0::1::::<><>::res://source/scenes/loot/meshes/Wood.material<>res://source/scenes/loot/meshes/Metal.material<>res://source/scenes/loot/meshes/glb files/Dark Metal.material<>res://source/scenes/loot/meshes/glb files/Chord.material
-Material_002.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-Metal.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-OBSIDIAN.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-Wood.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-::res://source/scenes/loot/meshes/glb files/::1672571039
-Bone.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-Chord.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-Dark Metal.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-Gem.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Anvil_Hammer.glb::PackedScene::366462786945211844::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Arming_Sword.glb::PackedScene::8543213488421697778::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Bat.glb::PackedScene::3074296631271910840::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Bearded_Axe.glb::PackedScene::7718991275133499770::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Big_Rock.glb::PackedScene::1302918741525006076::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Blunt_Arrow.glb::PackedScene::2123782930360116432::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Bone_Shiv.glb::PackedScene::1894070742130525497::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Bow.glb::PackedScene::5088662364184181326::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Broadhead_Arrow.glb::PackedScene::4736309060700026607::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Bullet_Arrow.glb::PackedScene::6080596994728514073::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Crossbow.glb::PackedScene::7733623995350911473::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Cutlass.glb::PackedScene::9035959917102197307::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Dagger.glb::PackedScene::2101683881899481450::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Double_Axe.glb::PackedScene::3731983529531336303::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Double_Hammer.glb::PackedScene::6325278379815037426::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Falchion.glb::PackedScene::5452289568687999458::1672570896::1672571038::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Flared_Spear.glb::PackedScene::3594180214308497611::1672570896::1672571039::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Great_Sword.glb::PackedScene::742005179065675072::1672570896::1672571039::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Halberd.glb::PackedScene::3797670922100745298::1672570896::1672571039::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Hatchet.glb::PackedScene::4956090190241866065::1672570896::1672571036::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Kopesh.glb::PackedScene::2384373188889232004::1672570896::1672571036::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Kriegmesser.glb::PackedScene::4874854780132341352::1672570896::1672571036::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Kukri.glb::PackedScene::7496385669651821860::1672570896::1672571036::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Leaf_Blade.glb::PackedScene::4335523077852893303::1672570896::1672571036::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Macuahuitl.glb::PackedScene::4347603094446862833::1672570896::1672571036::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Offset_Sword.glb::PackedScene::3685473431952253309::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Orc_Sword.glb::PackedScene::5412638932346941051::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Pebble.glb::PackedScene::2511208157544401755::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Piercing_Arrow.glb::PackedScene::4780302329552528553::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Pitchfork.glb::PackedScene::1361999714539880794::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Rock.glb::PackedScene::4000728971469223679::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Scimitar.glb::PackedScene::5302033718119116902::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Spear.glb::PackedScene::3313788127542154945::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Spiked_Club.glb::PackedScene::2225228730916862656::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_War_Hammer.glb::PackedScene::1005510999493521246::1672570896::1672571037::1::::<><>::
-Low Poly Weapon Pack - by Kickin It Studios.fbx_Wizard_Staff.glb::PackedScene::1717287594925706502::1672570896::1672571037::1::::<><>::
-Material_002.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-Metal.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-OBSIDIAN.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-Wood.material::StandardMaterial3D::-1::1672570896::0::1::::<><>::
-::res://source/scenes/main/::1672570996
-main.gd::GDScript::-1::1672571016::0::1::::<>MainScene<>::
-main.tscn::PackedScene::4086760826607540212::1672571016::0::1::::<><>::res://source/scenes/main/main.gd
-main_scene.gd::GDScript::-1::1672571016::0::1::::MainScene<>Node3D<>::
-::res://source/scenes/menus/::1672570996
-in_game_menu.gd::GDScript::-1::1672571016::0::1::::<>Control<>::
-in_game_menu.tscn::PackedScene::2063262687302270858::1672571016::0::1::::<><>::res://source/scenes/menus/in_game_menu.gd
-::res://source/scenes/menus/main_menu/::1672572164
-main_menu.gd::GDScript::-1::1672571442::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::1289381255572194604::1672572164::0::1::::<><>::uid://bc8bv4sptl1mn<>res://source/scenes/menus/settings/custom_button.gd<>res://source/scenes/menus/main_menu/main_menu.gd
-::res://source/scenes/menus/serials/::1672572164
-load.gd::GDScript::-1::1672571016::0::1::::<>SaveMenu<>::
-load.tscn::PackedScene::9068797294186856860::1672571016::0::1::::<><>::res://source/scenes/menus/serials/load.gd
-save.gd::GDScript::-1::1672571592::0::1::::SaveMenu<>Control<>::
-save.tscn::PackedScene::6218509663918718543::1672572164::0::1::::<><>::res://source/scenes/menus/serials/save.gd
-save_game.gd::GDScript::-1::1672571016::0::1::::<>Control<>::
-save_game.tscn::PackedScene::4734351743501438130::1672572164::0::1::::<><>::res://source/scenes/menus/serials/save_game.gd
-::res://source/scenes/menus/settings/::1672570996
-board_button.gd::GDScript::-1::1672571016::0::1::::BoardButton<>Button<>::
-change_button.gd::GDScript::-1::1672571016::0::1::::ChangeButton<>CustomButton<>::
-custom_button.gd::GDScript::-1::1672571016::0::1::::CustomButton<>Button<>::
-setting.gd::GDScript::-1::1672571016::0::1::::Setting<>Control<>::
-setting.tscn::PackedScene::1303781578754418856::1672571016::0::1::::<><>::res://source/scenes/menus/settings/setting.gd<>uid://pco4t4ktxbc7
-settings.gd::GDScript::-1::1672571016::0::1::::<>Control<>::
-settings.tscn::PackedScene::8438497492840837061::1672571016::0::1::::<><>::res://source/scenes/menus/settings/settings.gd<>uid://sttdeqtsu8d5<>res://source/scenes/menus/settings/custom_button.gd
-::res://source/scenes/world/::1672600369
-input_handler.gd::GDScript::-1::1672571016::0::1::::<>Node3D<>::
-world.gd::GDScript::-1::1672571016::0::1::::<>Node3D<>::
-world.tscn::PackedScene::4708633200412007444::1672600369::0::1::::<><>::res://source/scenes/character/character.tscn<>res://source/scenes/world/input_handler.gd<>res://source/scenes/world/world.gd<>res://source/scenes/world/objects/interactables/crate.tscn<>uid://b1ncitq00a3ne
-::res://source/scenes/world/objects/::1672570896
-::res://source/scenes/world/objects/interactables/::1672570896
-crate.gd::GDScript::-1::1672571016::0::1::::<>Node3D<>::
-crate.tscn::PackedScene::-1::1672571016::0::1::::<><>::res://source/scenes/character/attacks/hurtbox.gd<>res://source/scenes/world/objects/interactables/crate.gd
+::res://::1674463264
+default_bus_layout.tres::AudioBusLayout::-1::1668414963::0::1::::<><>::
+default_env.tres::Environment::-1::1673170128::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1668414963::0::1::::<><>::
+icon.png::CompressedTexture2D::2595022607208925941::1668414963::1673170128::1::::<><>::
+README.md::TextFile::-1::1668414963::0::1::::<><>::
+::res://assets/::1673170127
+::res://assets/audio/::1673170127
+::res://assets/audio/music/::1673170134
+The Run (Loopable).wav::AudioStreamWAV::145981974226965846::1673170134::1673170128::1::::<><>::
+::res://assets/fonts/::1673170128
+OpenDyslexic3-Regular.ttf::FontFile::7642995063138442821::1668414963::1673170128::1::::<><>::
+settings.tres::FontFile::-1::1673170128::0::1::::<><>::res://assets/fonts/OpenDyslexic3-Regular.ttf
+::res://assets/shader/::1668414963
+common.gdshader::Shader::-1::1668414963::0::1::::<><>::
+::res://assets/sprites/::1669565586
+::res://assets/sprites/inventory/::1673170128
+base_inventory.png::CompressedTexture2D::9204933617756688829::1669565586::1673170128::1::::<><>::
+square_back.png::CompressedTexture2D::6471430668915685147::1669565586::1673170128::1::::<><>::
+::res://assets/textures/::1673170128
+Marble023_1K_Color.png::CompressedTexture2D::8727914383622545807::1669565586::1673170128::1::::<><>::
+::res://assets/themes/::1673170128
+item_shield.tres::Theme::-1::1673170128::0::1::::<><>::res://assets/fonts/settings.tres
+main.theme::Theme::-1::1668414963::0::1::::<><>::res://assets/fonts/settings.tres
+settings.tres::Theme::1057864279224208464::1673170128::0::1::::<><>::res://assets/fonts/settings.tres
+::res://obsidian/::1668414963
+cliches.md::TextFile::-1::1668414963::0::1::::<><>::
+game idea.md::TextFile::-1::1668414963::0::1::::<><>::
+::res://obsidian/Excalidraw/::1668414963
+input.excalidraw.md::TextFile::-1::1668414963::0::1::::<><>::
+::res://obsidian/to-do/::1668414963
+Loot system.md::TextFile::-1::1668414963::0::1::::<><>::
+to-do-dave.md::TextFile::-1::1668414963::0::1::::<><>::
+to-do-general.md::TextFile::-1::1668414963::0::1::::<><>::
+to-do-liioni.md::TextFile::-1::1668414963::0::1::::<><>::
+::res://source/::1673170128
+::res://source/helpers/::1668414963
+::res://source/helpers/autoloads/::1673170128
+audio_manager.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+effect_manager.gd::GDScript::-1::1668414963::0::1::::<>Node<>::
+event.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+global.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+global_refs.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+graphic_manager.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+input_manager.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+screenshot.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+serialisation_manager.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+settings.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+settings_manager.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+variable_manager.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+::res://source/helpers/autoloads/scene_manager/::1673170128
+70.png::CompressedTexture2D::8991248821801903181::1673170128::1673170128::1::::<><>::
+bar.png::CompressedTexture2D::5403046923466547570::1668414963::1673170128::1::::<><>::
+over.png::CompressedTexture2D::4994677388893878852::1668414963::1673170128::1::::<><>::
+scene_manager.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+scene_manager.tscn::PackedScene::2348726467018960482::1673170128::0::1::::<><>::res://source/helpers/autoloads/scene_manager/scene_manager.gd<>uid://d1dos37ndi1vl<>uid://cysbys3kvxbh0
+under.png::CompressedTexture2D::7882150170726615395::1668414963::1673170128::1::::<><>::
+::res://source/helpers/common/::1673170128
+io_helper.gd::GDScript::-1::1673170128::0::1::::IOHelper<>RefCounted<>::
+::res://source/scenes/::1668414963
+::res://source/scenes/character/::1673170128
+character.gd::GDScript::-1::1673170128::0::1::::<>CharacterBody3D<>::
+character.tscn::PackedScene::8813257414834780005::1673170128::0::1::::<><>::res://source/scenes/character/character.gd<>res://source/scenes/character/attacks/hurtbox.gd<>res://source/scenes/loot/inventory.tscn<>res://source/scenes/character/attacks/skills/fireball.tscn
+::res://source/scenes/character/attacks/::1673170128
+hitbox.gd::GDScript::-1::1673170128::0::1::::HitBox<>Area3D<>::
+hurtbox.gd::GDScript::-1::1673170128::0::1::::HurtBox<>Area3D<>::
+sword.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/character/attacks/hitbox.gd
+::res://source/scenes/character/attacks/skills/::1673170128
+fireball.gd::GDScript::-1::1673170128::0::1::::Fireball<>Node3D<>::
+fireball.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/character/attacks/hitbox.gd<>res://source/scenes/character/attacks/skills/fireball.gd
+::res://source/scenes/credits/::1673170128
+credits.gd::GDScript::-1::1673170128::0::1::::<>Control<>::
+credits.json::JSON::-1::1673170128::0::1::::<><>::
+credits.tscn::PackedScene::5943525217916964010::1673170128::0::1::::<><>::res://source/scenes/credits/credits.gd
+::res://source/scenes/loot/::1673170128
+affix.gd::GDScript::-1::1673170128::0::1::::Affix<>Item<>::
+drop_shield.gd::GDScript::-1::1673170128::0::1::::<>Sprite3D<>::
+inventory.gd::GDScript::-1::1673170128::0::1::::Inventory<>Control<>::
+inventory.tscn::PackedScene::-1::1669818437::0::1::::<><>::res://source/scenes/loot/inventory.gd
+inventory_manager.gd::GDScript::-1::1673170128::0::1::::<>Node<>::
+inventory_slot.gd::GDScript::-1::1673170128::0::1::::<>Control<>::
+inventory_slot.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://assets/sprites/inventory/square_back.png<>res://source/scenes/loot/inventory_slot.gd
+item.gd::GDScript::-1::1673170128::0::1::::ItemDrop<>Control<>::
+item.tscn::PackedScene::7883613982041210768::1673170128::0::1::::<><>::res://source/scenes/loot/item.gd<>res://source/scenes/loot/item_3d.gd<>res://source/scenes/loot/item_2d.gd<>uid://bc8bv4sptl1mn<>res://source/scenes/loot/drop_shield.gd
+item_2d.gd::GDScript::-1::1673170128::0::1::::<>Control<>::
+item_3d.gd::GDScript::-1::1673170128::0::1::::<>RigidBody3D<>::
+item_consts.gd::GDScript::-1::1673170128::0::1::::Item<>Node<>::
+loot_manager.gd::GDScript::-1::1673170128::0::1::::<>Node3D<>::
+loot_manager.tscn::PackedScene::4238304273251342430::1673170128::0::1::::<><>::res://source/scenes/loot/loot_manager.gd<>uid://dkk4784rcvqiy<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Anvil_Hammer.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Double_Axe.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Arming_Sword.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bat.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bearded_Axe.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Big_Rock.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bone_Shiv.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Bow.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Crossbow.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Cutlass.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Double_Hammer.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Falchion.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Dagger.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Flared_Spear.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Great_Sword.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Halberd.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Hatchet.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Kopesh.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Kriegmesser.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Kukri.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Leaf_Blade.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Macuahuitl.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Offset_Sword.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Orc_Sword.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Pitchfork.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Scimitar.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Spear.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Spiked_Club.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_War_Hammer.tscn<>res://source/scenes/loot/meshes/Low Poly Weapon Pack - by Kickin It Studiosfbx_Wizard_Staff.tscn
+::res://source/scenes/loot/meshes/::1673170128
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Anvil_Hammer.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Anvil_Hammer.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Arming_Sword.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Arming_Sword.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Bat.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Bat.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Bearded_Axe.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Bearded_Axe.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Big_Rock.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Big_Rock.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Blunt_Arrow.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Blunt_Arrow.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Bone_Shiv.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Bone_Shiv.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Bow.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Bow.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Broadhead_Arrow.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Broadhead_Arrow.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Bullet_Arrow.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Bullet_Arrow.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Crossbow.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Crossbow.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Cutlass.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Cutlass.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Dagger.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Dagger.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Double_Axe.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Double_Axe.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Double_Hammer.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Double_Hammer.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Falchion.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Falchion.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Flared_Spear.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Flared_Spear.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Great_Sword.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Great_Sword.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Halberd.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Halberd.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Hatchet.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Hatchet.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Kopesh.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Kopesh.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Kriegmesser.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Kriegmesser.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Kukri.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Kukri.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Leaf_Blade.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Leaf_Blade.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Macuahuitl.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Macuahuitl.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Offset_Sword.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Offset_Sword.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Orc_Sword.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Orc_Sword.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Pebble.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Pebble.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Piercing_Arrow.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Piercing_Arrow.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Pitchfork.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Pitchfork.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Rock.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Rock.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Scimitar.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Scimitar.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Spear.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Spear.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Spiked_Club.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Spiked_Club.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_War_Hammer.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_War_Hammer.glb
+Low Poly Weapon Pack - by Kickin It Studiosfbx_Wizard_Staff.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/loot/meshes/glb files/Low Poly Weapon Pack - by Kickin It Studios.fbx_Wizard_Staff.glb
+Low Poly Weapon Pack - by Kickin It Studios_Cube060.mesh::ArrayMesh::-1::1668414963::0::1::::<><>::res://source/scenes/loot/meshes/Wood.material<>res://source/scenes/loot/meshes/Metal.material<>res://source/scenes/loot/meshes/glb files/Dark Metal.material<>res://source/scenes/loot/meshes/glb files/Chord.material
+Material_002.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+Metal.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+OBSIDIAN.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+Wood.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+::res://source/scenes/loot/meshes/glb files/::1673170130
+Bone.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+Chord.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+Dark Metal.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+Gem.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Anvil_Hammer.glb::PackedScene::366462786945211844::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Arming_Sword.glb::PackedScene::8543213488421697778::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Bat.glb::PackedScene::3074296631271910840::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Bearded_Axe.glb::PackedScene::7718991275133499770::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Big_Rock.glb::PackedScene::1302918741525006076::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Blunt_Arrow.glb::PackedScene::2123782930360116432::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Bone_Shiv.glb::PackedScene::1894070742130525497::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Bow.glb::PackedScene::5088662364184181326::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Broadhead_Arrow.glb::PackedScene::4736309060700026607::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Bullet_Arrow.glb::PackedScene::6080596994728514073::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Crossbow.glb::PackedScene::7733623995350911473::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Cutlass.glb::PackedScene::9035959917102197307::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Dagger.glb::PackedScene::2101683881899481450::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Double_Axe.glb::PackedScene::3731983529531336303::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Double_Hammer.glb::PackedScene::6325278379815037426::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Falchion.glb::PackedScene::5452289568687999458::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Flared_Spear.glb::PackedScene::3594180214308497611::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Great_Sword.glb::PackedScene::742005179065675072::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Halberd.glb::PackedScene::3797670922100745298::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Hatchet.glb::PackedScene::4956090190241866065::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Kopesh.glb::PackedScene::2384373188889232004::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Kriegmesser.glb::PackedScene::4874854780132341352::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Kukri.glb::PackedScene::7496385669651821860::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Leaf_Blade.glb::PackedScene::4335523077852893303::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Macuahuitl.glb::PackedScene::4347603094446862833::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Offset_Sword.glb::PackedScene::3685473431952253309::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Orc_Sword.glb::PackedScene::5412638932346941051::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Pebble.glb::PackedScene::2511208157544401755::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Piercing_Arrow.glb::PackedScene::4780302329552528553::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Pitchfork.glb::PackedScene::1361999714539880794::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Rock.glb::PackedScene::4000728971469223679::1673170130::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Scimitar.glb::PackedScene::5302033718119116902::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Spear.glb::PackedScene::3313788127542154945::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Spiked_Club.glb::PackedScene::2225228730916862656::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_War_Hammer.glb::PackedScene::1005510999493521246::1673170129::1673170128::1::::<><>::
+Low Poly Weapon Pack - by Kickin It Studios.fbx_Wizard_Staff.glb::PackedScene::1717287594925706502::1673170130::1673170128::1::::<><>::
+Material_002.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+Metal.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+OBSIDIAN.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+Wood.material::StandardMaterial3D::-1::1668414963::0::1::::<><>::
+::res://source/scenes/main/::1673170128
+main.gd::GDScript::-1::1673170128::0::1::::<>MainScene<>::
+main.tscn::PackedScene::4086760826607540212::1673170128::0::1::::<><>::res://source/scenes/main/main.gd
+main_scene.gd::GDScript::-1::1673170128::0::1::::MainScene<>Node3D<>::
+::res://source/scenes/menus/::1673170128
+in_game_menu.gd::GDScript::-1::1673170128::0::1::::<>Control<>::
+in_game_menu.tscn::PackedScene::2063262687302270858::1673170128::0::1::::<><>::res://source/scenes/menus/in_game_menu.gd
+::res://source/scenes/menus/main_menu/::1673170128
+main_menu.gd::GDScript::-1::1673170128::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::1289381255572194604::1673170128::0::1::::<><>::uid://bc8bv4sptl1mn<>res://source/scenes/menus/settings/custom_button.gd<>res://source/scenes/menus/main_menu/main_menu.gd
+::res://source/scenes/menus/serials/::1673170128
+load.gd::GDScript::-1::1673170128::0::1::::<>SaveMenu<>::
+load.tscn::PackedScene::9068797294186856860::1673170128::0::1::::<><>::res://source/scenes/menus/serials/load.gd
+save.gd::GDScript::-1::1673170128::0::1::::SaveMenu<>Control<>::
+save.tscn::PackedScene::6218509663918718543::1673170128::0::1::::<><>::res://source/scenes/menus/serials/save.gd
+save_game.gd::GDScript::-1::1673170128::0::1::::<>Control<>::
+save_game.tscn::PackedScene::4734351743501438130::1673170128::0::1::::<><>::res://source/scenes/menus/serials/save_game.gd
+::res://source/scenes/menus/settings/::1673170128
+board_button.gd::GDScript::-1::1668414963::0::1::::BoardButton<>Button<>::
+change_button.gd::GDScript::-1::1673170128::0::1::::ChangeButton<>CustomButton<>::
+custom_button.gd::GDScript::-1::1673170128::0::1::::CustomButton<>Button<>::
+setting.gd::GDScript::-1::1673170128::0::1::::Setting<>Control<>::
+setting.tscn::PackedScene::1303781578754418856::1673170128::0::1::::<><>::res://source/scenes/menus/settings/setting.gd<>uid://pco4t4ktxbc7
+settings.gd::GDScript::-1::1673170128::0::1::::<>Control<>::
+settings.tscn::PackedScene::8438497492840837061::1673170128::0::1::::<><>::res://source/scenes/menus/settings/settings.gd<>uid://sttdeqtsu8d5<>res://source/scenes/menus/settings/custom_button.gd
+::res://source/scenes/world/::1673170128
+input_handler.gd::GDScript::-1::1673170128::0::1::::<>Node3D<>::
+world.gd::GDScript::-1::1673170128::0::1::::<>Node3D<>::
+world.tscn::PackedScene::4708633200412007444::1673170128::0::1::::<><>::res://source/scenes/character/character.tscn<>res://source/scenes/world/input_handler.gd<>res://source/scenes/world/world.gd<>res://source/scenes/world/objects/interactables/crate.tscn<>uid://b1ncitq00a3ne
+::res://source/scenes/world/objects/::1668414963
+::res://source/scenes/world/objects/interactables/::1673170128
+crate.gd::GDScript::-1::1673170128::0::1::::<>Node3D<>::
+crate.tscn::PackedScene::-1::1673170128::0::1::::<><>::res://source/scenes/character/attacks/hurtbox.gd<>res://source/scenes/world/objects/interactables/crate.gd

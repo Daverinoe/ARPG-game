@@ -17,6 +17,9 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if state == owner.State.STATE_MOVE:
 			if event.button_index == 1 and event.is_pressed() and Global.can_control:
+				print("Event position: ")
+				print(event.position)
+				print(screen_point_to_ray(event.position))
 				character.moving = true
 				time_held = 0
 				character.set_target_position(screen_point_to_ray(event.position))
@@ -31,7 +34,7 @@ func _unhandled_input(event):
 			character.use_skill(1)
 	if event.is_action_pressed("right_click"):
 		for x in range(50):
-			Event.emit_signal("drop_loot", 10, character.global_translation)
+			Event.emit_signal("drop_loot", 10, character.global_transform.origin)
 
 
 func screen_point_to_ray(pos):

@@ -5,7 +5,7 @@ extends CharacterBody3D
 @onready var inventory_reference = $inventory
 
 var fireball = preload("res://source/scenes/character/attacks/skills/fireball.tscn")
-@onready var navigation = owner.get_node("Node3D")
+@onready var navigation = owner.get_node("Node3D/NavigationRegion3D")
 @onready var body = $CSGCylinder3D
 
 var next_point = Vector3()
@@ -23,24 +23,26 @@ var movement_held:bool = false
 
 func _ready():
 	Global.character_reference = self
-	nav.set_navigation(navigation)
+	nav.set_navigation_map(navigation)
 	Global.player_reference = self
 	Global.camera_reference = $sky_camera
 	InventoryManager.set_active_inventory(null)
+	Global.can_control = true
 
 
 func set_target_position(mouse_position : Vector3):
 	if mouse_position != Vector3(0,0,0):
-		nav.set_target_location(mouse_position)
+		nav.set_target_position (mouse_position)
+		print(mouse_position)
 
 
 func clear_target_position():
-	nav.set_target_location(global_transform.origin)
+	nav.set_target_position (global_transform.origin)
 
 
 func _physics_process(_delta):
 	if !nav.is_target_reached():
-		next_point = nav.get_next_location()
+		next_point = nav.get_next_path_position()
 		var dir = (next_point - global_transform.origin)
 		velocity = dir * movement_speed
 		velocity.y = 0
@@ -81,6 +83,6 @@ func take_damage(damage:int):
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("inventory"):
 		if inventory_reference.visible:
-			inventory_reference.hide()
+			inventory_reference.hide_inventory()
 		else:
-			inventory_reference.show()
+			inventory_reference.show_inventory()

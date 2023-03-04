@@ -196,12 +196,12 @@ func is_slot_occupied(slot_ref) -> bool:
 	return false
 
 
-func show() -> void:
+func show_inventory() -> void:
 	self.visible = true
 	set_item_visibilities(true)
 
 
-func hide() -> void:
+func hide_inventory() -> void:
 	Event.emit_signal("inventory_inactive", null)
 	self.visible = false
 	set_item_visibilities(false)
